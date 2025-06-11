@@ -17,7 +17,11 @@
             <p class="dev">Desenvolvido por Clênio Moura</p>
             <div class="search-box">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" id="input" onkeyup="filter()" placeholder="DIGITE O ENDEREÇO SEM ACENTOS..." autocomplete="off">
+                <input type="text" id="input" placeholder="Digite o endereço (com ou sem acentos)..." autocomplete="off">
+                <button id="voice-btn" onclick="startVoiceSearch()" title="Busca por voz">🎤 Voz</button>
+            </div>
+            <div class="search-options">
+                <a href="/admin.html" style="color: #054e7d; font-size: 12px;">🔧 Painel Admin</a>
             </div>
         </header>
 

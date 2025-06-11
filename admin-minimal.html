@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Admin Minimal - Busca CEP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .card { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+        .stat { background: #f8f9fa; padding: 15px; border-radius: 5px; text-align: center; }
+        .stat-number { font-size: 24px; font-weight: bold; color: #054e7d; }
+        .btn { padding: 10px 20px; background: #054e7d; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px; }
+        .btn:hover { background: #043a5f; }
+        .form-group { margin: 15px 0; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        .success { color: #28a745; }
+        .error { color: #dc3545; }
+        .back-link { color: #054e7d; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 30px;">
+            <h1>🔧 Admin Minimal</h1>
+            <p>Versão simplificada para conta gratuita</p>
+            <a href="/" class="back-link">← Voltar para busca</a>
+        </header>
+
+        <!-- Estatísticas -->
+        <div class="card">
+            <h2>📊 Estatísticas</h2>
+            <div class="stats" id="stats">
+                <div class="stat">
+                    <div class="stat-number" id="total">-</div>
+                    <div>Total</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="cidades">-</div>
+                    <div>Cidades</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="memoria">-</div>
+                    <div>Memória</div>
+                </div>
+            </div>
+            <button class="btn" onclick="loadStats()">🔄 Atualizar</button>
+        </div>
+
+        <!-- Adicionar CEP -->
+        <div class="card">
+            <h2>➕ Adicionar CEP</h2>
+            <form onsubmit="addCEP(event)">
+                <div class="form-group">
+                    <label>CEP:</label>
+                    <input type="text" id="cep" placeholder="38400-000" required>
+                </div>
+                <div class="form-group">
+                    <label>Logradouro:</label>
+                    <input type="text" id="logradouro" placeholder="Rua das Flores" required>
+                </div>
+                <div class="form-group">
+                    <label>Bairro:</label>
+                    <input type="text" id="bairro" placeholder="Centro">
+                </div>
+                <div class="form-group">
+                    <label>Cidade:</label>
+                    <input type="text" id="cidade" placeholder="Uberlândia" required>
+                </div>
+                <button type="submit" class="btn">💾 Adicionar</button>
+            </form>
+            <div id="add-result"></div>
+        </div>
+
+        <!-- Status do Sistema -->
+        <div class="card">
+            <h2>⚡ Status do Sistema</h2>
+            <div id="health-status">Carregando...</div>
+            <button class="btn" onclick="checkHealth()">🔍 Verificar</button>
+        </div>
+
+        <!-- Informações -->
+        <div class="card">
+            <h2>ℹ️ Informações</h2>
+            <p><strong>Versão:</strong> Minimal para Render Free</p>
+            <p><strong>Banco:</strong> Em memória (reinicia a cada deploy)</p>
+            <p><strong>Limitações:</strong></p>
+            <ul>
+                <li>Dados perdidos ao reiniciar</li>
+                <li>Sem backup automático</li>
+                <li>Sem scraper automático</li>
+                <li>Máximo ~100 endereços na memória</li>
+            </ul>
+            <p><strong>Vantagens:</strong></p>
+            <ul>
+                <li>Funciona na conta gratuita</li>
+                <li>Busca por voz funcional</li>
+                <li>Interface responsiva</li>
+                <li>API REST completa</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/cep/stats/info');
+                const data = await response.json();
+                
+                if (data.success) {
+                    document.getElementById('total').textContent = data.data.total;
+                    document.getElementById('cidades').textContent = data.data.cidades;
+                }
+            } catch (error) {
+                console.error('Erro ao carregar stats:', error);
+            }
+        }
+
+        async function checkHealth() {
+            try {
+                const response = await fetch('/health');
+                const data = await response.json();
+                
+                const status = document.getElementById('health-status');
+                status.innerHTML = `
+                    <div class="success">
+                        ✅ Sistema funcionando<br>
+                        📊 ${data.total_enderecos} endereços<br>
+                        💾 ${data.memory} de memória<br>
+                        🕐 ${new Date(data.timestamp).toLocaleString('pt-BR')}
+                    </div>
+                `;
+            } catch (error) {
+                document.getElementById('health-status').innerHTML = 
+                    '<div class="error">❌ Erro ao verificar status</div>';
+            }
+        }
+
+        async function addCEP(event) {
+            event.preventDefault();
+            
+            const cep = document.getElementById('cep').value;
+            const logradouro = document.getElementById('logradouro').value;
+            const bairro = document.getElementById('bairro').value;
+            const cidade = document.getElementById('cidade').value;
+            
+            try {
+                const response = await fetch('/api/cep/add', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ cep, logradouro, bairro, cidade })
+                });
+                
+                const data = await response.json();
+                const result = document.getElementById('add-result');
+                
+                if (data.success) {
+                    result.innerHTML = `<div class="success">✅ ${data.message} (Total: ${data.total})</div>`;
+                    document.querySelector('form').reset();
+                    loadStats();
+                } else {
+                    result.innerHTML = `<div class="error">❌ ${data.message}</div>`;
+                }
+            } catch (error) {
+                document.getElementById('add-result').innerHTML = 
+                    '<div class="error">❌ Erro ao adicionar CEP</div>';
+            }
+        }
+
+        // Carregar dados iniciais
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStats();
+            checkHealth();
+        });
+    </script>
+</body>
+</html>

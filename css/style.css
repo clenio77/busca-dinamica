@@ -55,16 +55,45 @@ body {
 .search-box {
     position: relative;
     margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #input {
-    width: 100%;
+    flex: 1;
     font-size: 18px;
     padding: 12px 20px 12px 50px; /* Aumento do padding esquerdo para o ícone */
     border: 2px solid #ccc; /* Borda mais grossa */
     border-radius: 25px; /* Cantos arredondados */
     transition: all 0.3s ease;
     outline: none; /* Remover outline padrão */
+}
+
+#voice-btn {
+    padding: 12px 20px;
+    background: #054e7d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+#voice-btn:hover {
+    background: #043a5f;
+}
+
+#voice-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.search-options {
+    text-align: center;
+    margin-top: 10px;
 }
 
 #input:focus {

@@ -1,0 +1,38 @@
+{
+  "name": "busca-dinamica-cep",
+  "version": "2.0.0",
+  "description": "Sistema de busca dinâmica de CEPs para Minas Gerais com agentes de coleta e atualização automática",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server-minimal.js",
+    "start:full": "node server-render.js",
+    "start:local": "node server.js",
+    "dev": "nodemon server.js",
+    "dev:render": "nodemon server-render.js",
+    "scraper": "node scripts/scraper.js",
+    "update": "node scripts/weekly-update.js",
+    "setup-db": "node scripts/setup-database.js",
+    "test": "node test-system.js",
+    "deploy": "./scripts/deploy.sh",
+    "backup": "node -e \"require('./services/backup-service').startBackupService().createBackup()\"",
+    "stats": "node -e \"require('./database/init').initDatabase().then(() => require('./routes/cep'))\""
+  },
+  "keywords": ["cep", "enderecos", "minas-gerais", "busca", "api"],
+  "author": "Clênio Moura",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "sqlite3": "^5.1.6",
+    "pg": "^8.11.3",
+    "axios": "^1.6.2",
+    "node-cron": "^3.0.3",
+    "express-rate-limit": "^7.1.5",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

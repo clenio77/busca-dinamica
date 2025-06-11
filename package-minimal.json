@@ -1,0 +1,21 @@
+{
+  "name": "busca-dinamica-cep-minimal",
+  "version": "2.0.0-minimal",
+  "description": "Sistema de busca dinâmica de CEPs - Versão minimal para Render Free",
+  "main": "server-minimal.js",
+  "scripts": {
+    "start": "node server-minimal.js",
+    "dev": "node server-minimal.js"
+  },
+  "keywords": ["cep", "enderecos", "minas-gerais", "busca", "minimal"],
+  "author": "Clênio Moura",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
