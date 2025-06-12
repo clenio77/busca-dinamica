@@ -1,6 +1,6 @@
 # Changelog - Busca Dinâmica CEP 2.0
 
-## [2.0.0] - 2024-06-11
+## [2.0.0] - 2025-07-11
 
 ### 🚀 Novas Funcionalidades
 
