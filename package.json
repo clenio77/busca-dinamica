@@ -15,7 +15,9 @@
     "test": "node test-system.js",
     "deploy": "./scripts/deploy.sh",
     "backup": "node -e \"require('./services/backup-service').startBackupService().createBackup()\"",
-    "stats": "node -e \"require('./database/init').initDatabase().then(() => require('./routes/cep'))\""
+    "stats": "node -e \"require('./database/init').initDatabase().then(() => require('./routes/cep'))\"",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "keywords": ["cep", "enderecos", "minas-gerais", "busca", "api"],
   "author": "Clênio Moura",
@@ -33,6 +35,11 @@
     "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.0",
+    "prettier": "^3.3.1"
   }
 }

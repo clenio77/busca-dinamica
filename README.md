@@ -18,8 +18,9 @@ Sistema avançado de busca dinâmica de CEPs para Minas Gerais com agentes autom
 
 ## 📋 Pré-requisitos
 
-- Node.js 16+ 
+- Node.js 18+
 - npm ou yarn
+- Docker (opcional para execução containerizada)
 
 ## 🔧 Instalação
 
@@ -89,6 +90,23 @@ GET /api/cep/38400-000
 GET /api/cep/stats/info
 ```
 
+### Admin – Estatísticas detalhadas (requer token)
+```
+GET /api/admin/stats/detailed
+Authorization: Bearer <ADMIN_TOKEN>
+```
+
+### Admin – Executar scraper manual (requer token)
+```
+POST /api/admin/scraper/run
+Content-Type: application/json
+Authorization: Bearer <ADMIN_TOKEN>
+{
+  "startFrom": 30000000,
+  "maxCEPs": 1000
+}
+```
+
 ## 🗂️ Estrutura do Projeto
 
 ```
@@ -138,6 +156,11 @@ npm run dev            # Modo desenvolvimento (nodemon)
 npm run setup-db       # Configurar banco inicial
 npm run scraper        # Executar scraper manual
 npm run update         # Executar atualização manual
+npm run lint           # Analisar código com ESLint
+npm run format         # Formatar código com Prettier
+
+docker build -t busca-cep .          # Build da imagem Docker
+docker run -p 3000:3000 busca-cep    # Executar container
 ```
 
 ## 📊 Monitoramento
@@ -193,3 +216,19 @@ MIT License - veja o arquivo LICENSE para detalhes.
 - APIs públicas: ViaCEP, BrasilAPI
 - Comunidade open source
 - Usuários e contribuidores
+
+## 🔍 Qualidade de Código
+
+- **ESLint**: Regras recomendadas + plugin `import` para organizar imports.
+- **Prettier**: Formatação de código consistente.
+- Scripts automáticos `npm run lint` e `npm run format`.
+- Configurações em `.eslintrc.json` e `.prettierrc`.
+
+## 🐳 Docker
+
+Execute o projeto sem instalar Node.js localmente:
+```bash
+docker build -t busca-cep .
+docker run -d -p 3000:3000 --env-file .env busca-cep
+```
+O serviço ficará acessível em `http://localhost:3000`.
