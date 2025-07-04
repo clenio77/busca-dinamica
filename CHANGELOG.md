@@ -1,5 +1,21 @@
 # Changelog - Busca Dinâmica CEP 2.0
 
+## [2.0.1] - 2025-07-12
+
+### 🛠️ Ferramentas de Desenvolvimento
+- **ESLint & Prettier**: Padronização automática de código
+- Scripts `npm run lint` e `npm run format`
+- Arquivos `.eslintrc.json` e `.prettierrc` adicionados
+- `.env.example` revisado com todas as variáveis e explicações
+
+### 📦 Docker
+- `Dockerfile` Alpine para builds leves
+- Instruções de build/run adicionadas ao README
+
+### 🔧 Outros
+- `.gitignore` atualizado para pasta `backups`
+- Novas dependências de desenvolvimento no `package.json`
+
 ## [2.0.0] - 2025-07-11
 
 ### 🚀 Novas Funcionalidades
