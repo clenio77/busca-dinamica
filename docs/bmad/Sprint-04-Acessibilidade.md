@@ -7,8 +7,8 @@ Garantir que a aplicação seja utilizável por leitores de tela e teclado.
 - Melhorar semântica e navegação por teclado.
 
 ## A — Ações
-- [ ] Adicionar `label` ao input e `aria-label`.
-- [ ] Usar landmarks semânticas (`<header>`, `<main>`, etc.) e `aria-live` para resultados.
+- [x] Adicionar `label` ao input e `aria-label`.
+- [x] Usar landmarks semânticas (`<header>`, `<main>`, etc.) e `aria-live` para resultados.
 - [ ] Garantir foco e navegação por teclado nos itens da lista.
 
 ## D — Definição de Pronto (DoD)
