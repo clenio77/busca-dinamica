@@ -241,6 +241,12 @@ O arquivo `vercel.json` já está configurado para build estático.
 - A cada push na branch `master`, a Vercel criará um novo deploy de produção.
 - Pull Requests recebem previews automáticos.
 
+### Deploy via GitHub Actions (opcional)
+Workflow `vercel-deploy.yml` configurado. Crie os secrets no repositório:
+- `VERCEL_TOKEN`: token da sua conta Vercel
+- `VERCEL_ORG_ID`: ID da organização (ou usuário) na Vercel
+- `VERCEL_PROJECT_ID`: ID do projeto na Vercel
+
 ## 🐳 Docker
 
 Execute o projeto sem instalar Node.js localmente:
