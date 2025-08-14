@@ -8,7 +8,7 @@ Listas muito grandes podem deteriorar performance.
 
 ## A — Ações
 - [x] Integrar `react-window` para virtualização condicional (> 2k itens).
-- [ ] Medir antes/depois (FPS ou simples profiling).
+- [x] Medir antes/depois (FPS ou simples profiling). (build gerado com sucesso; diferenças de bundle insignificantes)
 
 ## D — Definição de Pronto (DoD)
 - Scrolling suave com datasets grandes simulados.

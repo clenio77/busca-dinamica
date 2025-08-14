@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 function highlight(text, query) {
   if (!query) return text;
@@ -9,16 +9,23 @@ function highlight(text, query) {
   );
 }
 
-function AddressItem({ address, query }) {
+const AddressItem = forwardRef(function AddressItem({ address, query, tabIndex = -1, id }, ref) {
   return (
     <li>
-      <a href="#">
+      <button
+        type="button"
+        className="link-item"
+        id={id}
+        ref={ref}
+        tabIndex={tabIndex}
+        aria-label={`${address.street}, CEP ${address.cep}, bairro ${address.neighborhood}`}
+      >
         {highlight(address.street, query)}
         <strong> |{highlight(address.cep, query)}| </strong>
         {highlight(address.neighborhood, query)}
-      </a>
+      </button>
     </li>
   );
-}
+});
 
 export default AddressItem; 

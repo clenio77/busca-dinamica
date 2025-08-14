@@ -113,6 +113,25 @@ body {
     transition: background-color 0.3s ease; /* Transição para background */
 }
 
+.link-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid #1613db;
+    color: #555;
+    cursor: pointer;
+}
+
+.link-item:hover,
+.link-item:focus {
+    background-color: #f0f6ff;
+    outline: 2px solid #054e7d;
+    outline-offset: -2px;
+}
+
 #ul li a:hover {
     background-color: #f9f9f9; /* Fundo levemente alterado ao passar o mouse */
 }
