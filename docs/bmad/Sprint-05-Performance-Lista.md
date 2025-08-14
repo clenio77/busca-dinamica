@@ -7,7 +7,7 @@ Listas muito grandes podem deteriorar performance.
 - Evitar renderização de itens fora da viewport.
 
 ## A — Ações
-- [ ] Integrar `react-window` para virtualização condicional (> 2k itens).
+- [x] Integrar `react-window` para virtualização condicional (> 2k itens).
 - [ ] Medir antes/depois (FPS ou simples profiling).
 
 ## D — Definição de Pronto (DoD)
