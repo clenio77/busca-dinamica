@@ -10,9 +10,9 @@ function highlight(text, query) {
 }
 
 
-const AddressItem = forwardRef(function AddressItem({ address, query, tabIndex = -1, id }, ref) {
+const AddressItem = forwardRef(function AddressItem({ address, query, tabIndex = -1, id, style }, ref) {
   return (
-    <li>
+    <li style={style}>
       <button
         type="button"
         className="link-item"

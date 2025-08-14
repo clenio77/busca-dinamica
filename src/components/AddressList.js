@@ -29,15 +29,15 @@ function AddressList({ addresses, searchTerm }) {
                   style={{ overflowX: 'hidden' }}
                 >
                   {({ index, style }) => (
-                    <div style={style} key={addresses[index].cep + addresses[index].street + addresses[index].neighborhood}>
-                      <AddressItem
-                        address={addresses[index]}
-                        query={searchTerm}
-                        tabIndex={0}
-                        ref={el => itemRefs.current[index] = el}
-                        id={`address-item-${index}`}
-                      />
-                    </div>
+                    <AddressItem
+                      address={addresses[index]}
+                      query={searchTerm}
+                      tabIndex={0}
+                      ref={el => itemRefs.current[index] = el}
+                      id={`address-item-${index}`}
+                      style={style}
+                      key={addresses[index].cep + addresses[index].street + addresses[index].neighborhood}
+                    />
                   )}
                 </VirtualList>
               </ul>
