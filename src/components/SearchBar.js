@@ -15,7 +15,8 @@ function SearchBar({ searchTerm, onSearchChange }) {
 
   return (
     <div className="search-box">
-      <i className="fas fa-search search-icon"></i>
+      <label htmlFor="input" className="sr-only">Buscar endereço por rua, CEP ou bairro</label>
+      <i className="fas fa-search search-icon" aria-hidden="true"></i>
       <input
         type="text"
         id="input"
@@ -24,6 +25,7 @@ function SearchBar({ searchTerm, onSearchChange }) {
         onKeyDown={handleKeyDown}
         placeholder="DIGITE O ENDEREÇO SEM ACENTOS..."
         autoComplete="off"
+        aria-label="Buscar endereço por rua, CEP ou bairro"
       />
     </div>
   );
