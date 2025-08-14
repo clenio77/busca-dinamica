@@ -1,54 +1,44 @@
 {
-  "name": "busca-dinamica-cep",
-  "version": "2.0.0",
-  "description": "Sistema de busca dinâmica de CEPs para Minas Gerais com agentes de coleta e atualização automática",
-  "main": "server.js",
+  "name": "busca-dinamica-react",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Busca dinâmica de endereços (rua, CEP, bairro)",
   "scripts": {
-    "start": "node server-minimal.js",
-    "start:full": "node server-render.js",
-    "start:local": "node server.js",
-    "dev": "nodemon server.js",
-    "dev:render": "nodemon server-render.js",
-    "scraper": "node scripts/scraper.js",
-    "update": "node scripts/weekly-update.js",
-    "setup-db": "node scripts/setup-database.js",
-    "test": "node test-system.js",
-    "deploy": "./scripts/deploy.sh",
-    "backup": "node -e \"require('./services/backup-service').startBackupService().createBackup()\"",
-    "stats": "node -e \"require('./database/init').initDatabase().then(() => require('./routes/cep'))\"",
-    "lint": "echo 'no linter configured'",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "ci": "CI=true react-scripts test --watchAll=false",
-    "build": "react-scripts build"
+    "eject": "react-scripts eject",
+    "lint": "echo 'no linter configured'"
   },
-  "keywords": [
-    "cep",
-    "enderecos",
-    "minas-gerais",
-    "busca",
-    "api"
-  ],
-  "author": "Clênio Moura",
-  "license": "MIT",
   "dependencies": {
-    "axios": "^1.6.2",
-    "compression": "^1.7.4",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "express-rate-limit": "^7.1.5",
-    "helmet": "^7.1.0",
-    "node-cron": "^3.0.3",
-    "pg": "^8.11.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-scripts": "5.0.1",
     "react-window": "1.8.11",
-    "sqlite3": "^5.1.6"
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.0",
-    "nodemon": "^3.0.2",
     "prettier": "^3.3.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
