@@ -224,6 +224,23 @@ MIT License - veja o arquivo LICENSE para detalhes.
 - Scripts automáticos `npm run lint` e `npm run format`.
 - Configurações em `.eslintrc.json` e `.prettierrc`.
 
+## 🚀 Deploy na Vercel
+
+Esta aplicação é um frontend React (Create React App) pronto para deploy na Vercel.
+
+### Passo a passo
+1. Acesse a Vercel e importe o repositório `clenio77/busca-dinamica`.
+2. Framework: "Create React App" (detectado automaticamente).
+3. Comando de build: `npm run build`
+4. Diretório de saída: `build`
+5. Variáveis de ambiente: não são necessárias para o frontend atual.
+
+O arquivo `vercel.json` já está configurado para build estático.
+
+### Deploy contínuo
+- A cada push na branch `master`, a Vercel criará um novo deploy de produção.
+- Pull Requests recebem previews automáticos.
+
 ## 🐳 Docker
 
 Execute o projeto sem instalar Node.js localmente:
