@@ -7,9 +7,9 @@ Melhorar a percepção do usuário sobre o que está acontecendo durante a busca
 - Tornar a busca mais fluida e informativa.
 
 ## A — Ações
-- [ ] Implementar debounce (150–250ms) no input.
-- [ ] Realçar (highlight) o termo encontrado em rua/CEP/bairro.
-- [ ] Exibir contagem de resultados.
+- [x] Implementar debounce (150–250ms) no input.
+- [x] Realçar (highlight) o termo encontrado em rua/CEP/bairro.
+- [x] Exibir contagem de resultados.
 
 ## D — Definição de Pronto (DoD)
 - Input não dispara filtro a cada tecla rapidamente.

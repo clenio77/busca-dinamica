@@ -8,17 +8,20 @@ function AddressList({ addresses, searchTerm }) {
 
   return (
     <main className="main-content">
-      <ul id="ul">
-        {shouldDisplayList && (
-          addresses.length > 0 ? (
-            addresses.map(address => (
-              <AddressItem key={address.id} address={address} />
-            ))
-          ) : (
-            <li className="empty-state">Nenhum resultado</li>
-          )
-        )}
-      </ul>
+      {shouldDisplayList && (
+        <>
+          <p className="results-count">{addresses.length} resultado(s)</p>
+          <ul id="ul">
+            {addresses.length > 0 ? (
+              addresses.map(address => (
+                <AddressItem key={address.id} address={address} query={searchTerm} />
+              ))
+            ) : (
+              <li className="empty-state">Nenhum resultado</li>
+            )}
+          </ul>
+        </>
+      )}
     </main>
   );
 }

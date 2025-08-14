@@ -5,13 +5,15 @@ import SearchBar from './components/SearchBar';
 import AddressList from './components/AddressList';
 import Footer from './components/Footer';
 import { filterAddresses } from './utils/filterAddresses';
+import { useDebouncedValue } from './hooks/useDebouncedValue';
 import './App.css';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
+  const debouncedTerm = useDebouncedValue(searchTerm, 200);
   const filteredAddresses = useMemo(() => {
-    return filterAddresses(addressesData, searchTerm);
-  }, [searchTerm]);
+    return filterAddresses(addressesData, debouncedTerm);
+  }, [debouncedTerm]);
 
   const handleSearchChange = (term) => {
     setSearchTerm(term);
