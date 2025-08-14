@@ -9,6 +9,7 @@ function highlight(text, query) {
   );
 }
 
+
 const AddressItem = forwardRef(function AddressItem({ address, query, tabIndex = -1, id }, ref) {
   return (
     <li>
@@ -20,9 +21,11 @@ const AddressItem = forwardRef(function AddressItem({ address, query, tabIndex =
         tabIndex={tabIndex}
         aria-label={`${address.street}, CEP ${address.cep}, bairro ${address.neighborhood}`}
       >
-        {highlight(address.street, query)}
-        <strong> |{highlight(address.cep, query)}| </strong>
-        {highlight(address.neighborhood, query)}
+        <span style={{ fontWeight: 600, minWidth: 180 }}>{highlight(address.street, query)}</span>
+        <span style={{ color: '#b19700', fontWeight: 700, fontSize: '1.1em', margin: '0 10px' }}>
+          |{highlight(address.cep, query)}|
+        </span>
+        <span style={{ opacity: 0.85 }}>{highlight(address.neighborhood, query)}</span>
       </button>
     </li>
   );
