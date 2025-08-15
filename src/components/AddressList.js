@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import AddressItem from './AddressItem';
 import { FixedSizeList as VirtualList } from 'react-window';
 
@@ -63,20 +63,3 @@ function AddressList({ addresses, searchTerm }) {
 }
 
 export default AddressList;
-                                        </ul>
-          )}
-        </>
-      )}
-    </main>
-                                  <ul className="address-list">
-                                    {addresses.map((address, idx) => (
-                                      <AddressItem
-                                        key={address.cep + address.street + address.neighborhood}
-                                        address={address}
-                                        query={searchTerm}
-                                        tabIndex={0}
-                                        ref={el => itemRefs.current[idx] = el}
-                                        id={`address-item-${idx}`}
-                                      />
-                                    ))}
-                                  </ul>
