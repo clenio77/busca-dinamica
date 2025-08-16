@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: busca-cep
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SCRAPER_DELAY_MS
+        value: 2000
+      - key: MAX_REQUESTS_PER_MINUTE
+        value: 30
+      - key: DISABLE_CRON
+        value: true
+      - key: DISABLE_BACKUP
+        value: true
+      - key: DISABLE_FILE_LOGS
+        value: true
+
+  - type: pserv
+    name: busca-cep-db
+    env: postgresql
+    plan: free
+    databaseName: busca_cep
+    databaseUser: busca_cep_user

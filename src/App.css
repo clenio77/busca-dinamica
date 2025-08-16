@@ -1,0 +1,256 @@
+/* Lista de endereços - visual profissional */
+.address-list {
+    margin-top: 20px;
+    padding: 0;
+    border-radius: 16px;
+    background: #fffbe7;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border: 1px solid #f3e9b6;
+}
+
+.address-list li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(90deg, #fffbe7 80%, #ffe066 100%);
+    color: #1a1a1a;
+    border: none;
+    border-bottom: 1px solid #f3e9b6;
+    padding: 20px 28px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    border-radius: 0;
+    outline: none;
+    text-align: left;
+    gap: 12px;
+}
+
+.link-item:last-child {
+    border-bottom: none;
+}
+
+.link-item:hover, .link-item:focus {
+    background: linear-gradient(90deg, #ffe066 80%, #ffd43b 100%);
+    color: #054e7d;
+    box-shadow: 0 2px 8px rgba(255, 208, 67, 0.08);
+}
+
+.link-item mark {
+    background: #ffe066;
+    color: #054e7d;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 0 2px;
+}
+
+.results-count {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+    margin-left: 4px;
+}
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4e8ae4; /* Fundo cinza claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px; /* Ajustado para uma largura de conteúdo mais comum */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(239, 255, 97); /* Amarelo pastel bem suave */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 120px; /* Tamanho do logo ajustado */
+    height: auto;
+    margin-right: 15px;
+}
+
+.main-title {
+    font-size: 48px; /* Ligeiramente menor para melhor equilíbrio */
+    color: #042e49; /* Azul escuro do rodapé original */
+    font-weight: bold;
+    margin: 0;
+}
+
+.dev {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.search-box {
+    position: relative;
+    margin-top: 25px;
+}
+
+#input {
+    padding: 12px 40px;
+    border: 1px solid #ddd; /* Cor da borda ajustada */
+    border-radius: 25px; /* Cantos mais arredondados */
+    width: 100%;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease; /* Adiciona transição suave */
+}
+
+#input:focus {
+    border-color: #054e7d; /* Cor da borda ao focar */
+    box-shadow: 0 0 8px rgba(5, 78, 125, 0.2); /* Sombra ao focar */
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px;
+}
+
+#ul {
+    margin-top: 20px;
+    border: 1px solid #4911e6;
+    border-radius: 5px;
+    overflow: hidden; /* Garante que os cantos arredondados se apliquem aos filhos */
+}
+
+#ul li {
+    /* display handled by React component logic */
+}
+
+#ul li a {
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #1613db; /* Separador mais suave */
+    text-decoration: none;
+    color: #555; /* Cor do texto ajustada */
+    transition: background-color 0.3s ease; /* Transição para background */
+}
+
+.link-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid #1613db;
+    color: #555;
+    cursor: pointer;
+}
+
+.link-item:hover,
+.link-item:focus {
+    background-color: #f0f6ff;
+    outline: 2px solid #054e7d;
+    outline-offset: -2px;
+}
+
+#ul li a:hover {
+    background-color: #f9f9f9; /* Fundo levemente alterado ao passar o mouse */
+}
+
+#ul li:last-child a {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+#ul li a strong {
+    font-size: 18px; /* Mantém o tamanho do CEP consistente com o endereço */
+    color: #054e7d; /* Azul escuro para o CEP */
+    background-color: transparent; /* Remove o fundo preto */
+    padding: 0 5px;
+    border-radius: 3px;
+    white-space: nowrap; /* Evita que o CEP quebre a linha */
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #054e7d; /* Azul escuro */
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .main-title {
+        font-size: 36px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    #input {
+        font-size: 16px;
+        padding: 10px 15px 10px 45px;
+    }
+
+    .search-icon {
+        left: 15px;
+        font-size: 18px;
+    }
+
+    #ul li a {
+        font-size: 16px;
+        padding: 12px 15px;
+        flex-direction: column; /* Empilha o endereço e o CEP em telas menores */
+        align-items: flex-start;
+    }
+
+    #ul li a strong {
+        margin-top: 5px;
+    }
+}
