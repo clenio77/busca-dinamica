@@ -56,9 +56,18 @@ router.get('/search', searchValidationRules, asyncHandler(async (req, res) => {
     offset: offset,
   });
 
+  const formattedRows = rows.map(endereco => ({
+    street: endereco.logradouro,
+    neighborhood: endereco.bairro,
+    city: endereco.cidade,
+    state: endereco.estado,
+    cep: endereco.cep,
+    complement: endereco.complemento,
+  }));
+
   res.json({
     success: true,
-    data: rows,
+    data: formattedRows,
     total: count,
     query: q,
   });
@@ -96,7 +105,14 @@ router.get('/:cep', asyncHandler(async (req, res) => {
 
   res.json({
     success: true,
-    data: endereco,
+    data: {
+      street: endereco.logradouro,
+      neighborhood: endereco.bairro,
+      city: endereco.cidade,
+      state: endereco.estado,
+      cep: endereco.cep,
+      complement: endereco.complemento,
+    },
   });
 }));
 
