@@ -1,6 +1,11 @@
 /* eslint-env node */
 const sequelize = require('./connection');
 const Endereco = require('../models/endereco');
+const sqlite3 = require('sqlite3').verbose();
+const path = require('path');
+
+// Instância do banco SQLite para compatibilidade com scripts legados
+let sqliteDb = null;
 
 // Função para remover acentos, continua útil
 function removeAccents(str) {
@@ -56,9 +61,26 @@ async function initDatabase() {
   }
 }
 
+// Função para obter instância do banco SQLite (compatibilidade com scripts legados)
+function getDatabase() {
+  if (!sqliteDb) {
+    const dbPath = process.env.DB_PATH || path.join(__dirname, 'ceps.db');
+    sqliteDb = new sqlite3.Database(dbPath, (err) => {
+      if (err) {
+        console.error('Erro ao conectar com SQLite:', err.message);
+      }
+    });
+  }
+  return sqliteDb;
+}
+
 async function closeDatabase() {
   try {
     await sequelize.close();
+    if (sqliteDb) {
+      sqliteDb.close();
+      sqliteDb = null;
+    }
     console.log('Conexão com banco de dados fechada');
   } catch (error) {
     console.error('Erro ao fechar banco de dados:', error);
@@ -69,5 +91,6 @@ module.exports = {
   initDatabase,
   closeDatabase,
   removeAccents,
-  sequelize, 
+  getDatabase,
+  sequelize,
 };
