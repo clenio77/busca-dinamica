@@ -12,9 +12,11 @@ function removeAccents(str) {
 
 export function useAddressSearch() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCity, setSelectedCity] = useState('');
   const [filteredAddresses, setFilteredAddresses] = useState([]);
   const [loading, setLoading] = useState(true); // Inicia como true para o carregamento inicial
-  
+  const [availableCities, setAvailableCities] = useState([]);
+
   // Usamos useRef para armazenar todos os endereços e evitar recarregamentos
   const allAddresses = useRef([]);
   const debouncedTerm = useDebouncedValue(searchTerm, 200);
@@ -31,6 +33,11 @@ export function useAddressSearch() {
       })
       .then(data => {
         allAddresses.current = data;
+
+        // Extrair cidades únicas e ordenar
+        const cities = [...new Set(data.map(addr => addr.cidade).filter(Boolean))].sort();
+        setAvailableCities(cities);
+
         setLoading(false);
       })
       .catch(error => {
@@ -39,27 +46,51 @@ export function useAddressSearch() {
       });
   }, []); // O array vazio [] garante que este efeito rode apenas uma vez
 
-  // Efeito para FILTRAR os endereços em memória quando o termo de busca muda
+  // Efeito para FILTRAR os endereços em memória quando o termo de busca ou cidade muda
   useEffect(() => {
-    if (!debouncedTerm || debouncedTerm.length < 2) {
-      setFilteredAddresses([]);
-      return;
+    let filtered = allAddresses.current;
+
+    // Filtrar por cidade primeiro, se uma cidade estiver selecionada
+    if (selectedCity) {
+      filtered = filtered.filter(address => address.cidade === selectedCity);
     }
 
-    if (allAddresses.current.length > 0) {
+    // Depois filtrar por termo de busca, se houver
+    if (debouncedTerm && debouncedTerm.length >= 2) {
       const term = removeAccents(debouncedTerm);
-      const filtered = allAddresses.current.filter(addr => 
-        removeAccents(addr.logradouro).includes(term) ||
-        removeAccents(addr.bairro).includes(term) ||
-        removeAccents(addr.cidade).includes(term) ||
+      filtered = filtered.filter(addr =>
+        removeAccents(addr.logradouro || '').includes(term) ||
+        removeAccents(addr.bairro || '').includes(term) ||
+        removeAccents(addr.cidade || '').includes(term) ||
         (addr.cep && addr.cep.includes(term))
-      ).slice(0, 100); // Limita a 100 resultados para não sobrecarregar a tela
-      
-      setFilteredAddresses(filtered);
+      );
+    } else if (!selectedCity) {
+      // Se não há termo de busca e nenhuma cidade selecionada, mostrar array vazio
+      filtered = [];
     }
 
-  }, [debouncedTerm]);
+    // Ordenar resultados: primeiro os que têm logradouro preenchido
+    const sorted = filtered.sort((a, b) => {
+      const aHasLogradouro = a.logradouro && a.logradouro.trim() !== '';
+      const bHasLogradouro = b.logradouro && b.logradouro.trim() !== '';
+
+      if (aHasLogradouro && !bHasLogradouro) return -1;
+      if (!aHasLogradouro && bHasLogradouro) return 1;
+      return 0;
+    });
+
+    // Limitar a 100 resultados para não sobrecarregar a tela
+    setFilteredAddresses(sorted.slice(0, 100));
+  }, [debouncedTerm, selectedCity]);
 
   // Retornamos os endereços filtrados para a UI
-  return { searchTerm, setSearchTerm, addresses: filteredAddresses, loading };
+  return {
+    searchTerm,
+    setSearchTerm,
+    selectedCity,
+    setSelectedCity,
+    availableCities,
+    addresses: filteredAddresses,
+    loading
+  };
 }

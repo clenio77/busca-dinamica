@@ -1,3 +1,49 @@
+/* Controles de busca */
+.search-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+/* Filtro de cidade */
+.city-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 200px;
+}
+
+.city-filter label {
+    font-size: 0.9rem;
+    color: #054e7d;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.city-select {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    color: #333;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.city-select:focus {
+    border-color: #ffe066;
+    box-shadow: 0 0 0 3px rgba(255, 224, 102, 0.2);
+}
+
+.city-select:disabled {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
 /* Lista de endereços - visual profissional */
 .address-list {
     margin-top: 20px;
