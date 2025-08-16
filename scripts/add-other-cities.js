@@ -30,28 +30,29 @@ class MultiCityCEPCollector extends UltraConservativeCEPCollector {
 
     for (const cityInfo of this.cities) {
       console.log(`\n📍 === COLETANDO: ${cityInfo.name.toUpperCase()} ===`);
-      console.log(`🎯 Faixa de CEPs: ${this.formatCep(cityInfo.cepStart)} - ${this.formatCep(cityInfo.cepEnd)}`);
-      
+      console.log(
+        `🎯 Faixa de CEPs: ${this.formatCep(cityInfo.cepStart)} - ${this.formatCep(cityInfo.cepEnd)}`
+      );
+
       try {
         const cityResult = await this.collectCityRange(
-          cityInfo.cepStart, 
-          cityInfo.cepEnd, 
+          cityInfo.cepStart,
+          cityInfo.cepEnd,
           cityInfo.name,
           maxCepsPerCity
         );
-        
+
         results.citiesResults[cityInfo.name] = cityResult;
         results.totalProcessed += cityResult.processed;
         results.totalFound += cityResult.found;
-        
+
         console.log(`✅ ${cityInfo.name}: ${cityResult.found} CEPs coletados`);
-        
+
         // Pausa entre cidades para não sobrecarregar APIs
         if (this.cities.indexOf(cityInfo) < this.cities.length - 1) {
           console.log('⏸️  Pausando 30s antes da próxima cidade...');
-          await new Promise(resolve => setTimeout(resolve, 30000));
+          await new Promise((resolve) => setTimeout(resolve, 30000));
         }
-        
       } catch (error) {
         console.error(`❌ Erro ao coletar ${cityInfo.name}:`, error.message);
         results.citiesResults[cityInfo.name] = { processed: 0, found: 0, error: error.message };
@@ -86,13 +87,16 @@ class MultiCityCEPCollector extends UltraConservativeCEPCollector {
 
         if (cepData && cepData.cidade) {
           // Verificar se é da cidade esperada (busca flexível)
-          const cityMatch = cepData.cidade.toLowerCase().includes(expectedCity.toLowerCase()) ||
-                           expectedCity.toLowerCase().includes(cepData.cidade.toLowerCase());
+          const cityMatch =
+            cepData.cidade.toLowerCase().includes(expectedCity.toLowerCase()) ||
+            expectedCity.toLowerCase().includes(cepData.cidade.toLowerCase());
 
           if (cityMatch) {
             await this.saveCepData(cepData);
             found++;
-            console.log(`✅ ${formattedCep}: ${cepData.logradouro || 'N/A'}, ${cepData.bairro}, ${cepData.cidade}`);
+            console.log(
+              `✅ ${formattedCep}: ${cepData.logradouro || 'N/A'}, ${cepData.bairro}, ${cepData.cidade}`
+            );
           } else {
             console.log(`ℹ️  ${formattedCep}: ${cepData.cidade} (cidade diferente)`);
           }
@@ -106,8 +110,7 @@ class MultiCityCEPCollector extends UltraConservativeCEPCollector {
         }
 
         // Rate limiting
-        await new Promise(resolve => setTimeout(resolve, this.delay));
-
+        await new Promise((resolve) => setTimeout(resolve, this.delay));
       } catch (error) {
         console.error(`❌ Erro ${formattedCep}:`, error.message);
         currentCep += 50; // Pular mais CEPs em caso de erro
@@ -127,13 +130,15 @@ class MultiCityCEPCollector extends UltraConservativeCEPCollector {
     console.log(`📊 Resumo Geral:`);
     console.log(`   - Total processado: ${results.totalProcessed}`);
     console.log(`   - Total encontrado: ${results.totalFound}`);
-    
+
     console.log(`\n🏙️  Resultados por Cidade:`);
     for (const [cityName, cityResult] of Object.entries(results.citiesResults)) {
       if (cityResult.error) {
         console.log(`   ❌ ${cityName}: Erro - ${cityResult.error}`);
       } else {
-        console.log(`   ✅ ${cityName}: ${cityResult.found} CEPs (${cityResult.processed} processados)`);
+        console.log(
+          `   ✅ ${cityName}: ${cityResult.found} CEPs (${cityResult.processed} processados)`
+        );
       }
     }
 
@@ -145,9 +150,12 @@ class MultiCityCEPCollector extends UltraConservativeCEPCollector {
     });
 
     const citiesInDB = await new Promise((resolve) => {
-      this.db.all('SELECT cidade, COUNT(*) as count FROM enderecos GROUP BY cidade ORDER BY count DESC', (err, rows) => {
-        resolve(rows || []);
-      });
+      this.db.all(
+        'SELECT cidade, COUNT(*) as count FROM enderecos GROUP BY cidade ORDER BY count DESC',
+        (err, rows) => {
+          resolve(rows || []);
+        }
+      );
     });
 
     console.log(`\n📊 Base de Dados Atualizada:`);
@@ -161,13 +169,12 @@ class MultiCityCEPCollector extends UltraConservativeCEPCollector {
 
 async function collectMultipleCities() {
   const collector = new MultiCityCEPCollector();
-  
+
   try {
     await collector.init();
-    
+
     const results = await collector.collectFromMultipleCities(30); // 30 CEPs por cidade
     await collector.printMultiCityStats(results);
-    
   } catch (error) {
     console.error('❌ Erro fatal:', error);
     process.exit(1);

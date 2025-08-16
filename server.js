@@ -1,3 +1,4 @@
+/* eslint-env node */
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -33,7 +34,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Servir arquivos estáticos
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Mover arquivos existentes para public
 app.use('/css', express.static(path.join(__dirname, 'css')));
@@ -46,21 +47,22 @@ app.use('/api/admin', adminRoutes);
 
 // Rota principal - servir o index.html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-// Middleware de tratamento de erros
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ 
-    error: 'Algo deu errado!',
-    message: process.env.NODE_ENV === 'development' ? err.message : 'Erro interno do servidor'
-  });
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // Middleware para rotas não encontradas
-app.use('*', (req, res) => {
+app.use((req, res, next) => {
   res.status(404).json({ error: 'Rota não encontrada' });
+});
+
+// Middleware de tratamento de erros centralizado
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ 
+    success: false,
+    message: 'Erro interno do servidor',
+    error: process.env.NODE_ENV === 'development' ? err.message : undefined
+  });
 });
 
 // Inicialização do servidor
