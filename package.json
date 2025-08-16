@@ -9,13 +9,26 @@
     "test": "react-scripts test",
     "ci": "CI=true react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "lint": "echo 'no linter configured'"
+    "lint": "echo 'no linter configured'",
+    "setup-mcp": "node scripts/setup-mcp.js",
+    "mcp-server": "node mcp-servers/cep-scraper-server.js",
+    "test-uberlandia": "node scripts/test-uberlandia-scraper.js",
+    "scrape-improved": "node scripts/cep-scraper-improved.js",
+    "mass-collect": "node scripts/mass-cep-collector.js",
+    "sequential-collect": "node scripts/sequential-cep-collector.js",
+    "smart-collect": "node scripts/smart-cep-collector.js",
+    "ultra-collect": "node scripts/ultra-conservative-collector.js",
+    "auto-collect": "node scripts/auto-collector.js"
   },
   "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "playwright": "^1.54.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
     "react-window": "1.8.11",
+    "sqlite3": "^5.1.7",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {

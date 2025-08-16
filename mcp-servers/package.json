@@ -1,0 +1,21 @@
+{
+  "name": "cep-scraper-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server para scraping de CEPs com Playwright",
+  "main": "cep-scraper-server.js",
+  "scripts": {
+    "start": "node cep-scraper-server.js",
+    "install-playwright": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "playwright": "^1.40.0",
+    "sqlite3": "^5.1.6"
+  },
+  "peerDependencies": {
+    "sqlite3": "^5.1.6"
+  },
+  "keywords": ["mcp", "scraping", "cep", "playwright"],
+  "author": "Clênio Moura",
+  "license": "MIT"
+}

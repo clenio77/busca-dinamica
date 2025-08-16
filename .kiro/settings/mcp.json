@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "playwright-scraper": {
+      "command": "uvx",
+      "args": ["playwright-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "INFO"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "playwright_navigate",
+        "playwright_fill",
+        "playwright_click",
+        "playwright_get_text",
+        "playwright_screenshot"
+      ]
+    },
+    "cep-scraper-custom": {
+      "command": "node",
+      "args": ["./mcp-servers/cep-scraper-server.js"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "scrape_cep_range",
+        "scrape_city_ceps",
+        "validate_cep_data"
+      ]
+    }
+  }
+}
