@@ -31,7 +31,7 @@ function App() {
         <SearchBar onSearchChange={setSearchTerm} searchTerm={searchTerm} />
       </div>
       {loading && <p>Buscando...</p>}
-      <AddressList addresses={addresses} searchTerm={searchTerm} />
+      <AddressList addresses={addresses} searchTerm={searchTerm} selectedCity={selectedCity} />
       <Footer />
     </div>
   );

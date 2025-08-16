@@ -11,6 +11,12 @@ function highlight(text, query) {
 
 
 const AddressItem = forwardRef(function AddressItem({ address, query, tabIndex = -1, id, style }, ref) {
+  // Garantir que os campos existem e não são undefined
+  const logradouro = address.logradouro || 'Logradouro não informado';
+  const cep = address.cep || '';
+  const bairro = address.bairro || '';
+  const cidade = address.cidade || '';
+
   return (
     <li style={style}>
       <button
@@ -19,13 +25,17 @@ const AddressItem = forwardRef(function AddressItem({ address, query, tabIndex =
         id={id}
         ref={ref}
         tabIndex={tabIndex}
-        aria-label={`${address.street}, CEP ${address.cep}, bairro ${address.neighborhood}`}
+        aria-label={`${logradouro}, CEP ${cep}, bairro ${bairro}, ${cidade}`}
       >
-        <span style={{ fontWeight: 600, minWidth: 180 }}>{highlight(address.street, query)}</span>
+        <span style={{ fontWeight: 600, minWidth: 180 }}>{highlight(logradouro, query)}</span>
         <span style={{ color: '#b19700', fontWeight: 700, fontSize: '1.1em', margin: '0 10px' }}>
-          |{highlight(address.cep, query)}|
+          |{highlight(cep, query)}|
         </span>
-        <span style={{ opacity: 0.85 }}>{highlight(address.neighborhood, query)}</span>
+        <span style={{ opacity: 0.85 }}>
+          {bairro && highlight(bairro, query)}
+          {bairro && cidade && ' - '}
+          {cidade && highlight(cidade, query)}
+        </span>
       </button>
     </li>
   );

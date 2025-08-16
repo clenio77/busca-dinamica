@@ -2,8 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import AddressItem from './AddressItem';
 import { FixedSizeList as VirtualList } from 'react-window';
 
-function AddressList({ addresses, searchTerm }) {
-  const shouldDisplayList = searchTerm.length > 0;
+function AddressList({ addresses, searchTerm, selectedCity }) {
+  const shouldDisplayList = searchTerm.length > 0 || selectedCity;
   const largeList = addresses.length > 2000;
   const itemRefs = useRef([]);
 
@@ -36,7 +36,7 @@ function AddressList({ addresses, searchTerm }) {
                       ref={el => itemRefs.current[index] = el}
                       id={`address-item-${index}`}
                       style={style}
-                      key={addresses[index].cep + addresses[index].street + addresses[index].neighborhood}
+                      key={addresses[index].cep + (addresses[index].logradouro || '') + (addresses[index].bairro || '')}
                     />
                   )}
                 </VirtualList>
@@ -45,7 +45,7 @@ function AddressList({ addresses, searchTerm }) {
               <ul className="address-list">
                 {addresses.map((address, idx) => (
                   <AddressItem
-                    key={address.cep + address.street + address.neighborhood}
+                    key={address.cep + (address.logradouro || '') + (address.bairro || '')}
                     address={address}
                     query={searchTerm}
                     tabIndex={0}
