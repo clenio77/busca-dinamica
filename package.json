@@ -5,7 +5,7 @@
   "description": "Busca dinâmica de endereços (rua, CEP, bairro)",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node scripts/generate-json-from-db.js && react-scripts build",
     "test": "react-scripts test",
     "ci": "CI=true react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
