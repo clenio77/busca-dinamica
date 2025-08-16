@@ -18,7 +18,8 @@
     "sequential-collect": "node scripts/sequential-cep-collector.js",
     "smart-collect": "node scripts/smart-cep-collector.js",
     "ultra-collect": "node scripts/ultra-conservative-collector.js",
-    "auto-collect": "node scripts/auto-collector.js"
+    "auto-collect": "node scripts/auto-collector.js",
+    "extract-html": "node scripts/extract-html-ceps.js"
   },
   "dependencies": {
     "axios": "^1.11.0",
