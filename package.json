@@ -19,7 +19,10 @@
     "smart-collect": "node scripts/smart-cep-collector.js",
     "ultra-collect": "node scripts/ultra-conservative-collector.js",
     "auto-collect": "node scripts/auto-collector.js",
-    "extract-html": "node scripts/extract-html-ceps.js"
+    "extract-html": "node scripts/extract-html-ceps.js",
+    "add-cities": "node scripts/add-other-cities.js",
+    "robust-cities": "node scripts/robust-city-collector.js",
+    "curated-cities": "node scripts/curated-cities-data.js"
   },
   "dependencies": {
     "axios": "^1.11.0",
