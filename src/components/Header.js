@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImage from '../assets/logoclenio.jpg';
 
 function Header() {
   return (
@@ -14,7 +15,7 @@ function Header() {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4">
               <div className="flex-shrink-0">
                 <img
-                  src="/image/logoclenio.jpg"
+                  src={logoImage}
                   alt="Logo Clênio Moura"
                   className="w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-xl shadow-lg object-cover border-2 border-white/20"
                 />
