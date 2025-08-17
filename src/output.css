@@ -744,6 +744,10 @@ video {
   display: none;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-12 {
   height: 3rem;
 }
@@ -784,6 +788,10 @@ video {
   min-height: 100vh;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -810,10 +818,6 @@ video {
 
 .w-5 {
   width: 1.25rem;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .w-full {
@@ -925,12 +929,6 @@ video {
   gap: 1rem;
 }
 
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -1030,6 +1028,11 @@ video {
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
 .border-gray-400 {
@@ -1559,12 +1562,12 @@ video {
     display: none;
   }
 
-  .sm\:h-14 {
-    height: 3.5rem;
+  .sm\:h-24 {
+    height: 6rem;
   }
 
-  .sm\:w-14 {
-    width: 3.5rem;
+  .sm\:w-24 {
+    width: 6rem;
   }
 
   .sm\:grid-cols-3 {

@@ -166,3 +166,4 @@ secrets/
 # Cache
 .cache/
 *.cache
+.vercel

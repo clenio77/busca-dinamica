@@ -7,11 +7,11 @@ function Footer() {
     <footer className="mt-16 bg-gray-50 border-t border-gray-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
+          <div className="flex items-center justify-center space-x-3 mb-4">
             <img
-              src="image/logo.png"
-              alt="Logo"
-              className="w-8 h-8 rounded-lg"
+              src="image/logoclenio.jpg"
+              alt="Logo Clênio Moura"
+              className="w-10 h-10 rounded-lg object-cover border border-gray-300"
             />
             <span className="text-lg font-semibold text-gray-700">
               Busca Dinâmica 2.0
