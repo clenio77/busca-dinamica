@@ -14,7 +14,7 @@ function Header() {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4">
               <div className="flex-shrink-0">
                 <img
-                  src="image/logoclenio.jpg"
+                  src="image/logo.png"
                   alt="Logo Clênio Moura"
                   className="w-12 h-12 sm:w-16 sm:h-16 md:w-18 md:h-18 rounded-xl shadow-lg object-cover border-2 border-white/20"
                 />

@@ -9,7 +9,7 @@ function Footer() {
         <div className="text-center">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <img
-              src="image/logoclenio.jpg"
+              src="image/logo.png"
               alt="Logo Clênio Moura"
               className="w-10 h-10 rounded-lg object-cover border border-gray-300"
             />
