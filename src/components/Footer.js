@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImage from '../assets/logoclenio.jpg';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,7 @@ function Footer() {
         <div className="text-center">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <img
-              src="image/logoclenio.jpg"
+              src={logoImage}
               alt="Logo Clênio Moura"
               className="w-10 h-10 rounded-lg object-cover border border-gray-300"
             />
