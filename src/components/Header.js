@@ -16,7 +16,7 @@ function Header() {
                 <img
                   src="image/logoclenio.jpg"
                   alt="Logo Clênio Moura"
-                  className="w-12 h-12 sm:w-16 sm:h-16 md:w-18 md:h-18 rounded-xl shadow-lg object-cover border-2 border-white/20"
+                  className="w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-xl shadow-lg object-cover border-2 border-white/20"
                 />
               </div>
               <div className="text-center sm:text-left">
