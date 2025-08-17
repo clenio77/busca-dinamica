@@ -1,3 +1,49 @@
-/* básico */
-html, body, #root { height: 100%; }
-body { margin: 0; }
+@import './output.css';
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 0.375rem;
+}
+
+.scrollbar-track-gray-100::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+}
+
+/* Base styles */
+html, body, #root {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom focus styles for better accessibility */
+*:focus {
+  outline: none;
+}
+
+/* Smooth transitions for all interactive elements */
+button, input, select {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom mark styling for search highlights */
+mark {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+}

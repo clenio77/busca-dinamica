@@ -4,11 +4,38 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/image/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#007AFF" />
     <meta
       name="description"
       content="Busca dinâmica de endereços por rua, CEP e bairro em Uberlândia."
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sf': ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Segoe UI', 'Roboto', 'sans-serif'],
+            },
+            colors: {
+              'apple-blue': '#007AFF',
+              'apple-gray': {
+                50: '#F2F2F7',
+                100: '#E5E5EA',
+                200: '#D1D1D6',
+                300: '#C7C7CC',
+                400: '#AEAEB2',
+                500: '#8E8E93',
+                600: '#636366',
+                700: '#48484A',
+                800: '#3A3A3C',
+                900: '#1C1C1E',
+              }
+            }
+          }
+        }
+      }
+    </script>
     
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.

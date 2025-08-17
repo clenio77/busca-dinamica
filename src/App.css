@@ -175,13 +175,14 @@ body {
 }
 
 #input {
-    padding: 12px 40px;
-    border: 1px solid #ddd; /* Cor da borda ajustada */
+    padding: 18px 50px;
+    border: 2px solid #ddd; /* Cor da borda ajustada */
     border-radius: 25px; /* Cantos mais arredondados */
     width: 100%;
-    font-size: 1em;
+    font-size: 1.2em;
     outline: none;
     transition: all 0.3s ease; /* Adiciona transição suave */
+    min-height: 60px;
 }
 
 #input:focus {
@@ -191,11 +192,11 @@ body {
 
 .search-icon {
     position: absolute;
-    left: 20px;
+    left: 22px;
     top: 50%;
     transform: translateY(-50%);
     color: #999;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 #ul {

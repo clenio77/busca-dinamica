@@ -48,6 +48,12 @@ export function useAddressSearch() {
 
   // Efeito para FILTRAR os endereços em memória quando o termo de busca ou cidade muda
   useEffect(() => {
+    // Só mostrar resultados se houver termo de busca com pelo menos 2 caracteres
+    if (!debouncedTerm || debouncedTerm.length < 2) {
+      setFilteredAddresses([]);
+      return;
+    }
+
     let filtered = allAddresses.current;
 
     // Filtrar por cidade primeiro, se uma cidade estiver selecionada
@@ -55,19 +61,14 @@ export function useAddressSearch() {
       filtered = filtered.filter(address => address.cidade === selectedCity);
     }
 
-    // Depois filtrar por termo de busca, se houver
-    if (debouncedTerm && debouncedTerm.length >= 2) {
-      const term = removeAccents(debouncedTerm);
-      filtered = filtered.filter(addr =>
-        removeAccents(addr.logradouro || '').includes(term) ||
-        removeAccents(addr.bairro || '').includes(term) ||
-        removeAccents(addr.cidade || '').includes(term) ||
-        (addr.cep && addr.cep.includes(term))
-      );
-    } else if (!selectedCity) {
-      // Se não há termo de busca e nenhuma cidade selecionada, mostrar array vazio
-      filtered = [];
-    }
+    // Filtrar por termo de busca
+    const term = removeAccents(debouncedTerm);
+    filtered = filtered.filter(addr =>
+      removeAccents(addr.logradouro || '').includes(term) ||
+      removeAccents(addr.bairro || '').includes(term) ||
+      removeAccents(addr.cidade || '').includes(term) ||
+      (addr.cep && addr.cep.includes(term))
+    );
 
     // Ordenar resultados: primeiro os que têm logradouro preenchido
     const sorted = filtered.sort((a, b) => {
