@@ -1562,12 +1562,12 @@ video {
     display: none;
   }
 
-  .sm\:h-24 {
-    height: 6rem;
+  .sm\:h-16 {
+    height: 4rem;
   }
 
-  .sm\:w-24 {
-    width: 6rem;
+  .sm\:w-16 {
+    width: 4rem;
   }
 
   .sm\:grid-cols-3 {
