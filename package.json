@@ -13,6 +13,7 @@
     "eject": "react-scripts eject",
     "lint": "echo 'no linter configured'",
     "setup-mcp": "node scripts/setup-mcp.js",
+    "setup-render": "node scripts/setup-render-env.js",
     "mcp-server": "node mcp-servers/cep-scraper-server.js",
     "test-uberlandia": "node scripts/test-uberlandia-scraper.js",
     "scrape-improved": "node scripts/cep-scraper-improved.js",

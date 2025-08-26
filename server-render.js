@@ -10,6 +10,10 @@ require('dotenv').config();
 const cepRoutes = require('./routes/cep-postgres');
 const { initDatabase } = require('./database/postgres-init');
 
+// Importar serviços de automação
+const { startWeeklyUpdate } = require('./services/weekly-update');
+const { UltraConservativeCEPCollector } = require('./scripts/ultra-conservative-collector');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -70,7 +74,8 @@ app.get('/health', (req, res) => {
     status: 'ok', 
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
-    memory: process.memoryUsage()
+    memory: process.memoryUsage(),
+    cronEnabled: process.env.DISABLE_CRON !== 'true'
   });
 });
 
@@ -96,6 +101,125 @@ app.get('/api/admin/stats', async (req, res) => {
   } catch (error) {
     console.error('Erro ao buscar estatísticas:', error);
     res.status(500).json({ success: false, message: 'Erro interno' });
+  }
+});
+
+// Endpoint para execução manual de cron jobs
+app.post('/api/admin/cron/execute', async (req, res) => {
+  try {
+    const { action, params = {} } = req.body;
+    
+    if (!action) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Ação não especificada' 
+      });
+    }
+
+    console.log(`🔄 Executando ação manual: ${action}`);
+
+    switch (action) {
+      case 'collect-ceps':
+        // Executar coleta de CEPs
+        const { startFrom = 38400010, maxCEPs = 10 } = params;
+        
+        const collector = new UltraConservativeCEPCollector();
+        await collector.init();
+        
+        const results = await collector.collectUltraConservatively(
+          parseInt(startFrom),
+          Math.min(parseInt(maxCEPs), 50) // Limite máximo de 50
+        );
+        
+        res.json({
+          success: true,
+          message: 'Coleta manual executada com sucesso',
+          results,
+          timestamp: new Date().toISOString()
+        });
+        break;
+
+      case 'weekly-update':
+        // Executar atualização semanal
+        const { getUpdateService } = require('./services/weekly-update');
+        const updateService = getUpdateService();
+        
+        if (updateService) {
+          await updateService.checkForUpdates();
+          const status = updateService.getStatus();
+          
+          res.json({
+            success: true,
+            message: 'Atualização semanal executada com sucesso',
+            status,
+            timestamp: new Date().toISOString()
+          });
+        } else {
+          res.status(500).json({
+            success: false,
+            message: 'Serviço de atualização não disponível'
+          });
+        }
+        break;
+
+      case 'status':
+        // Retornar status dos serviços
+        const { getUpdateService: getUpdateStatus } = require('./services/weekly-update');
+        const updateStatus = getUpdateStatus();
+        
+        res.json({
+          success: true,
+          data: {
+            cronEnabled: process.env.DISABLE_CRON !== 'true',
+            updateService: updateStatus ? updateStatus.getStatus() : null,
+            environment: process.env.NODE_ENV,
+            timestamp: new Date().toISOString()
+          }
+        });
+        break;
+
+      default:
+        res.status(400).json({
+          success: false,
+          message: `Ação '${action}' não reconhecida. Ações válidas: collect-ceps, weekly-update, status`
+        });
+    }
+
+  } catch (error) {
+    console.error('Erro ao executar ação manual:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Erro interno ao executar ação',
+      error: process.env.NODE_ENV === 'development' ? error.message : 'Erro interno'
+    });
+  }
+});
+
+// Endpoint para verificar status dos cron jobs
+app.get('/api/admin/cron/status', (req, res) => {
+  try {
+    const { getUpdateService } = require('./services/weekly-update');
+    const updateService = getUpdateService();
+    
+    res.json({
+      success: true,
+      data: {
+        cronEnabled: process.env.DISABLE_CRON !== 'true',
+        updateService: updateService ? updateService.getStatus() : null,
+        schedules: {
+          weeklyUpdate: process.env.UPDATE_SCHEDULE || '0 2 * * 1',
+          dailyCollect: process.env.COLLECT_SCHEDULE || '0 6 * * *'
+        },
+        environment: process.env.NODE_ENV,
+        timestamp: new Date().toISOString()
+      }
+    });
+  } catch (error) {
+    console.error('Erro ao verificar status dos cron jobs:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Erro ao verificar status'
+    });
   }
 });
 
@@ -173,12 +297,57 @@ async function startServer() {
       console.log('✅ PostgreSQL inicializado');
     }
 
+    // Inicializar cron jobs se habilitados
+    if (process.env.DISABLE_CRON !== 'true') {
+      console.log('⏰ Inicializando cron jobs...');
+      
+      try {
+        // Iniciar serviço de atualização semanal
+        const updateService = startWeeklyUpdate();
+        console.log('✅ Serviço de atualização semanal iniciado');
+        
+        // Configurar cron jobs locais como fallback
+        const cron = require('node-cron');
+        
+        // Cron job para coleta diária (6h da manhã)
+        const collectSchedule = process.env.COLLECT_SCHEDULE || '0 6 * * *';
+        cron.schedule(collectSchedule, async () => {
+          console.log('🔄 Executando coleta diária automática...');
+          try {
+            const collector = new UltraConservativeCEPCollector();
+            await collector.init();
+            
+            const results = await collector.collectUltraConservatively(
+              38400010, // CEP inicial (Uberlândia)
+              10        // Máximo de 10 CEPs por execução
+            );
+            
+            console.log('✅ Coleta diária concluída:', results);
+          } catch (error) {
+            console.error('❌ Erro na coleta diária:', error);
+          }
+        }, {
+          scheduled: true,
+          timezone: "America/Sao_Paulo"
+        });
+        
+        console.log(`✅ Cron job de coleta configurado: ${collectSchedule}`);
+        
+      } catch (error) {
+        console.error('⚠️ Erro ao inicializar cron jobs:', error);
+        console.log('ℹ️ Cron jobs desabilitados, mas endpoints manuais funcionam');
+      }
+    } else {
+      console.log('ℹ️ Cron jobs desabilitados por configuração');
+    }
+
     // Iniciar servidor
     app.listen(PORT, '0.0.0.0', () => {
       console.log(`🚀 Servidor rodando na porta ${PORT}`);
       console.log(`📍 Health check: http://localhost:${PORT}/health`);
       console.log(`🔍 Busca CEP: http://localhost:${PORT}`);
       console.log(`🔧 Admin: http://localhost:${PORT}/admin`);
+      console.log(`⏰ Cron jobs: ${process.env.DISABLE_CRON !== 'true' ? 'Habilitados' : 'Desabilitados'}`);
     });
 
   } catch (error) {

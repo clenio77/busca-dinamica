@@ -13,11 +13,19 @@ services:
       - key: MAX_REQUESTS_PER_MINUTE
         value: 30
       - key: DISABLE_CRON
-        value: true
+        value: false
       - key: DISABLE_BACKUP
-        value: true
+        value: false
       - key: DISABLE_FILE_LOGS
-        value: true
+        value: false
+      - key: CRON_SECRET
+        generateValue: true
+      - key: MANUAL_EXECUTION_TOKEN
+        generateValue: true
+      - key: UPDATE_SCHEDULE
+        value: "0 2 * * 1"
+      - key: COLLECT_SCHEDULE
+        value: "0 6 * * *"
 
   - type: pserv
     name: busca-cep-db
