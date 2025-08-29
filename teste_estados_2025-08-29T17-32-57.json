@@ -1,0 +1,2002 @@
+[
+  {
+    "logradouro": "Alameda Abrantes",
+    "bairro": "Condomínio Residencial Portugal II",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-650",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.661Z"
+  },
+  {
+    "logradouro": "Alameda Alcides Zanandréa",
+    "bairro": "Residencial Vista Verde II",
+    "localidade": "Adamantina/SP",
+    "cep": "17803-442",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Aldo Cavichioli",
+    "bairro": "Residencial Vista Verde",
+    "localidade": "Adamantina/SP",
+    "cep": "17803-462",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Amarante",
+    "bairro": "Condomínio Residencial Portugal II",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-642",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Antonio Buzzeto",
+    "bairro": "Vila Cicma",
+    "localidade": "Adamantina/SP",
+    "cep": "17803-124",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Antonio Buzzeto",
+    "bairro": "Vila Olivero",
+    "localidade": "Adamantina/SP",
+    "cep": "17803-136",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Armindo Silva",
+    "bairro": "Vila Cicma",
+    "localidade": "Adamantina/SP",
+    "cep": "17803-120",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Armindo Silva",
+    "bairro": "Vila Olivero",
+    "localidade": "Adamantina/SP",
+    "cep": "17803-132",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Aurora Mendes Cruz Del Valle",
+    "bairro": "Residencial Siqueira II",
+    "localidade": "Adamantina/SP",
+    "cep": "17803-002",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Aveiro",
+    "bairro": "Condomínio Residencial Portugal II",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-634",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Barcelos",
+    "bairro": "Condomínio Residencial Portugal II",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-652",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Belo Horizonte",
+    "bairro": "Vila Jamil de Lima",
+    "localidade": "Adamantina/SP",
+    "cep": "17805-406",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Braga",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-622",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Bragança",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-598",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Bráulio Molina Frias",
+    "bairro": "Vila Cicma",
+    "localidade": "Adamantina/SP",
+    "cep": "17803-112",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Cascais",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-626",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Chujiro Matsuda - lado par",
+    "bairro": "Vila Endo",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-456",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Chujiro Matsuda - lado par",
+    "bairro": "Vila Fátima",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-460",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Coimbra",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-610",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Cônego João Baptista de Aquino",
+    "bairro": "Centro",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-021",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Cônego João Baptista de Aquino",
+    "bairro": "Vila Joaquina",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-138",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Curitiba",
+    "bairro": "Vila Jamil de Lima",
+    "localidade": "Adamantina/SP",
+    "cep": "17805-412",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Curitiba - lado par",
+    "bairro": "Conjunto Habitacional das Azaleias",
+    "localidade": "Adamantina/SP",
+    "cep": "17805-432",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda das Margaridas",
+    "bairro": "Vila Jardim",
+    "localidade": "Adamantina/SP",
+    "cep": "17805-334",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda de Fátima",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-628",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda do Porto",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-608",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Domingos Martins",
+    "bairro": "Residencial Vista Verde",
+    "localidade": "Adamantina/SP",
+    "cep": "17803-454",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Dona Maria Cândida Romanini",
+    "bairro": "Centro",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-025",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda Dona Maria Cândida Romanini",
+    "bairro": "Vila Joaquina",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-142",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda dos Expedicionários",
+    "bairro": "Centro",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-019",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda dos Expedicionários",
+    "bairro": "Conjunto Habitacional Jardim das Acácias",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-414",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.679Z"
+  },
+  {
+    "logradouro": "Alameda dos Expedicionários",
+    "bairro": "Vila Joaquina",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-136",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Doutor Armando de Salles Oliveira",
+    "bairro": "Centro",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-011",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Doutor Armando de Salles Oliveira",
+    "bairro": "Vila Industrial",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-322",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Doutor Armando de Salles Oliveira",
+    "bairro": "Vila Joaquina",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-130",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Doutor Armando de Salles Oliveira - lado par",
+    "bairro": "Desmembramento San Conrado",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-112",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Estoril",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-602",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Évora",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-606",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Felgueiras",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-620",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Fernão Dias",
+    "bairro": "Centro",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-005",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Fernão Dias",
+    "bairro": "Vila Bandeirantes",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-074",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Fernão Dias",
+    "bairro": "Vila Jardim Jurema",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-100",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Fernão Dias - lado ímpar",
+    "bairro": "Vila Christina",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-082",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Figueira da Foz",
+    "bairro": "Condomínio Residencial Portugal II",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-646",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Florianópolis",
+    "bairro": "Vila Jamil de Lima",
+    "localidade": "Adamantina/SP",
+    "cep": "17805-416",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Francisco José de Azevedo - lado ímpar",
+    "bairro": "Parque Residencial Jaraguá",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-576",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Francisco José de Azevedo - lado par",
+    "bairro": "Desmembramento Pioneiros",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-372",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Francisco José de Azevedo - lado par",
+    "bairro": "Jardim América",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-350",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Francisco José de Azevedo - lado par",
+    "bairro": "Parque Residencial Iguaçu",
+    "localidade": "Adamantina/SP",
+    "cep": "17800-214",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Alameda Funchal",
+    "bairro": "Condomínio Residencial Portugal",
+    "localidade": "Adamantina/SP",
+    "cep": "17808-624",
+    "cidade": "Adamantina/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:31:56.680Z"
+  },
+  {
+    "logradouro": "Anel Viário José Mendonça de Almeida",
+    "bairro": "Jardim Amaral",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-426",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Área Rural",
+    "bairro": "Área Rural de Adolfo",
+    "localidade": "Adolfo/SP",
+    "cep": "15239-899",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Avenida Antônio Pires dos Santos",
+    "bairro": "Jardim Celeste",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-270",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Avenida Antônio Pires dos Santos",
+    "bairro": "Jardim dos Laranjais",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-298",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Avenida Marginal Sebastião Fernandes",
+    "bairro": "Residencial Anallinne III",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-316",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Avenida Marino Seloto",
+    "bairro": "Jardim Amaral",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-404",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Avenida Octacilio Ruiz Maldonado",
+    "bairro": "Jardim Amaral",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-400",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Avenida Octacilio Ruiz Maldonado",
+    "bairro": "Jardim dos Laranjais",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-306",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Avenida Rafael Ferreira Forte",
+    "bairro": "Jardim Primavera",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-112",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Avenida Rafael Ferreira Forti",
+    "bairro": "Jardim das Oliveiras",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-056",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Avenida Rafael Ferreira Forti",
+    "bairro": "Jardim Espanha",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-090",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Abilio Luis Marcon",
+    "bairro": "Jardim das Oliveiras",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-060",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Adelia Vieira Castrilho Fernandes",
+    "bairro": "Jardim dos Laranjais",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-304",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Adelina Bagno de Carvalho",
+    "bairro": "Residencial Anallinne III",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-308",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Albino Bisaio",
+    "bairro": "Jardim Espanha",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-096",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Alvino Bernardo da Costa",
+    "bairro": "Jardim Primavera",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-110",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Alvino Bernardo da Costa",
+    "bairro": "Residencial Tavares",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-100",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Alvino Rodrigues Pereira",
+    "bairro": "Residencial Anallinne III",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-312",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Angelino Francisco Gobe",
+    "bairro": "Jardim Espanha",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-088",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Angelino Soldeira",
+    "bairro": "Jardim Mantovan",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-262",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Angelo Francisco Gobi",
+    "bairro": "Jardim das Oliveiras",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-058",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Angelo Gandini",
+    "bairro": "Residencial Gandini",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-186",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Antonia Maria Serafine",
+    "bairro": "Jardim Mantovan",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-258",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Antonio Aparecido Borges",
+    "bairro": "Jardim das Oliveiras",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-072",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Antonio Dias Chaves",
+    "bairro": "Jardim das Oliveiras",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-050",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Antonio Francischetti",
+    "bairro": "Jardim Amaral",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-424",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Aparecido Donizete Zanelato",
+    "bairro": "Residencial Martinez",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-070",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Benedito Batista Bitencout",
+    "bairro": "Jardim das Oliveiras",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-052",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Benedito da Silva Ribeiro",
+    "bairro": "Residencial Martinez",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-060",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Benedito Fernandes Siqueira",
+    "bairro": "Residencial Gandini",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-182",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Bruno Burato",
+    "bairro": "Jardim Amaral",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-422",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Caetano Morelli",
+    "bairro": "Jardim Celeste",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-274",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Caetano Morelli",
+    "bairro": "Jardim Mantovan",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-256",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Cassiano Bruno da Silveira",
+    "bairro": "Residencial Anallinne III",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-306",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Castro Alves",
+    "bairro": "Centro",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-019",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Castro Alves",
+    "bairro": "Distrito Industrial",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-320",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Castro Alves",
+    "bairro": "Jardim Celeste",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-282",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Castro Alves",
+    "bairro": "Jardim Primavera",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-138",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Castro Alves",
+    "bairro": "Vila Celestino Tedeschi",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-140",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Castro Alves, 984AC Adolfo",
+    "bairro": "Centro",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-970",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Castro Alves, 984 Clique e Retire CorreiosAC Adolfo Clique e Retire",
+    "bairro": "Centro",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-959",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Claudio Cesar Botacini",
+    "bairro": "Distrito Industrial",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-326",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Clóvis Bevilaqua",
+    "bairro": "Centro",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-005",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Clóvis Bevilaqua",
+    "bairro": "Jardim Aldeia",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-040",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Clóvis Bevilaqua",
+    "bairro": "Jardim Amaral",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-410",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua das Camélias",
+    "bairro": "Jardim Primavera",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-130",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua das Dálias",
+    "bairro": "Jardim Primavera",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-124",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua das Flores",
+    "bairro": "Jardim Primavera",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-120",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua das Tulipas",
+    "bairro": "Jardim Primavera",
+    "localidade": "Adolfo/SP",
+    "cep": "15232-118",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Rua Deraldina Soares de Oliveira",
+    "bairro": "Residencial Martinez",
+    "localidade": "Adolfo/SP",
+    "cep": "15230-066",
+    "cidade": "Adolfo/SP",
+    "estado": "SP",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:08.424Z"
+  },
+  {
+    "logradouro": "Alameda das Dálias",
+    "bairro": "Cidade Alegria",
+    "localidade": "Resende/RJ",
+    "cep": "27525-230",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Alameda do Mercado",
+    "bairro": "Cidade Alegria",
+    "localidade": "Resende/RJ",
+    "cep": "27525-220",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Alameda dos Jasmins",
+    "bairro": "Cidade Alegria",
+    "localidade": "Resende/RJ",
+    "cep": "27525-210",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Área Rural",
+    "bairro": "Área Rural de Resende",
+    "localidade": "Resende/RJ",
+    "cep": "27549-899",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida A",
+    "bairro": "Jardim Aliança II",
+    "localidade": "Resende/RJ",
+    "cep": "27525-820",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida A",
+    "bairro": "Portal de Pirapitinga - Solaris",
+    "localidade": "Resende/RJ",
+    "cep": "27540-480",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida A",
+    "bairro": "Residências do Vale",
+    "localidade": "Resende/RJ",
+    "cep": "27521-625",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida Adauto Emiliano Soares",
+    "bairro": "Nova Resende",
+    "localidade": "Resende/RJ",
+    "cep": "27521-750",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida Albino de Almeida - lado ímpar",
+    "bairro": "Campos Elíseos",
+    "localidade": "Resende/RJ",
+    "cep": "27542-080",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida Albino de Almeida - lado par",
+    "bairro": "Campos Elíseos",
+    "localidade": "Resende/RJ",
+    "cep": "27542-070",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida Antônio Marins",
+    "bairro": "Mirante das Agulhas",
+    "localidade": "Resende/RJ",
+    "cep": "27524-510",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida B",
+    "bairro": "Jardim Aliança II",
+    "localidade": "Resende/RJ",
+    "cep": "27525-822",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida B",
+    "bairro": "Residências do Vale",
+    "localidade": "Resende/RJ",
+    "cep": "27521-627",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida C",
+    "bairro": "Jardim Aliança II",
+    "localidade": "Resende/RJ",
+    "cep": "27525-824",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.037Z"
+  },
+  {
+    "logradouro": "Avenida Central",
+    "bairro": "Bela Vista",
+    "localidade": "Resende/RJ",
+    "cep": "27524-700",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Contorno",
+    "bairro": "Fazenda da Barra",
+    "localidade": "Resende/RJ",
+    "cep": "27540-210",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida D",
+    "bairro": "Jardim Aliança II",
+    "localidade": "Resende/RJ",
+    "cep": "27525-825",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida das Amendoeiras Norte",
+    "bairro": "Cidade Alegria",
+    "localidade": "Resende/RJ",
+    "cep": "27525-310",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida das Amendoeiras Sul",
+    "bairro": "Cidade Alegria",
+    "localidade": "Resende/RJ",
+    "cep": "27525-314",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida das Mangueiras Norte",
+    "bairro": "Cidade Alegria",
+    "localidade": "Resende/RJ",
+    "cep": "27525-250",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida das Mangueiras Sul",
+    "bairro": "Cidade Alegria",
+    "localidade": "Resende/RJ",
+    "cep": "27525-260",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida das Palmeiras",
+    "bairro": "Fazenda da Barra 2",
+    "localidade": "Resende/RJ",
+    "cep": "27540-040",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida do Canal",
+    "bairro": "Fazenda da Barra",
+    "localidade": "Resende/RJ",
+    "cep": "27540-090",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Dorival Marcondes Godoy - de 312 ao fim - lado par",
+    "bairro": "Fazenda Castelo",
+    "localidade": "Resende/RJ",
+    "cep": "27535-320",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Dorival Marcondes Godoy - lado ímpar",
+    "bairro": "Fazenda Castelo",
+    "localidade": "Resende/RJ",
+    "cep": "27535-321",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Doutor Gustavo Jardim",
+    "bairro": "Centro",
+    "localidade": "Resende/RJ",
+    "cep": "27511-360",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Doutor Omar Dibo Calixto Afrange",
+    "bairro": "Pólo Industrial",
+    "localidade": "Resende/RJ",
+    "cep": "27537-802",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Doutor Sebastião Moreira Neto",
+    "bairro": "Nova Resende",
+    "localidade": "Resende/RJ",
+    "cep": "27521-752",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Duque de Caxias - de 34 ao fim - lado par",
+    "bairro": "Independência (Agulhas Negras)",
+    "localidade": "Resende/RJ",
+    "cep": "27533-010",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida E",
+    "bairro": "Jardim Aliança II",
+    "localidade": "Resende/RJ",
+    "cep": "27525-827",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Fausto Barbosa Diniz",
+    "bairro": "Nova Resende",
+    "localidade": "Resende/RJ",
+    "cep": "27521-754",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Francisco Fortes Filho",
+    "bairro": "Jardim Aliança",
+    "localidade": "Resende/RJ",
+    "cep": "27525-598",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Francisco Fortes Filho",
+    "bairro": "Mirante de Serra",
+    "localidade": "Resende/RJ",
+    "cep": "27521-620",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida General Afonseca - até 1089 - lado ímpar",
+    "bairro": "Manejo",
+    "localidade": "Resende/RJ",
+    "cep": "27520-172",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida General Afonseca - de 1091 ao fim - lado ímpar",
+    "bairro": "Manejo",
+    "localidade": "Resende/RJ",
+    "cep": "27520-174",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida General Afonseca - de 1140 ao fim - lado par",
+    "bairro": "Manejo",
+    "localidade": "Resende/RJ",
+    "cep": "27520-175",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida General Afonseca - de 2 a 1138 - lado par",
+    "bairro": "Manejo",
+    "localidade": "Resende/RJ",
+    "cep": "27520-173",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Governador Portela - até 1005 - lado ímpar",
+    "bairro": "Vila Julieta",
+    "localidade": "Resende/RJ",
+    "cep": "27520-251",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Governador Portela - de 2 a 660 - lado par",
+    "bairro": "Vila Julieta",
+    "localidade": "Resende/RJ",
+    "cep": "27520-252",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Gustavo Jardim",
+    "bairro": "Barbosa Lima",
+    "localidade": "Resende/RJ",
+    "cep": "27511-670",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Jefferson Geraldo Bruno",
+    "bairro": "Paraíso",
+    "localidade": "Resende/RJ",
+    "cep": "27536-015",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida João Gomes Jardim",
+    "bairro": "Nova Alegria",
+    "localidade": "Resende/RJ",
+    "cep": "27525-366",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida João VI",
+    "bairro": "Guararapes",
+    "localidade": "Resende/RJ",
+    "cep": "27533-130",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Juscelino Kubitschek de Oliveira",
+    "bairro": "Fazenda da Barra 2",
+    "localidade": "Resende/RJ",
+    "cep": "27540-250",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Manoel Menandro da Silva",
+    "bairro": "Capelinha (Fumaça)",
+    "localidade": "Resende/RJ",
+    "cep": "27550-100",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Mercílio Rodrigues",
+    "bairro": "Vicentino",
+    "localidade": "Resende/RJ",
+    "cep": "27513-298",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Nissan",
+    "bairro": "Pólo Industrial",
+    "localidade": "Resende/RJ",
+    "cep": "27537-800",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Nova Resende",
+    "bairro": "Campos Elíseos",
+    "localidade": "Resende/RJ",
+    "cep": "27542-130",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Prefeito Botafogo",
+    "bairro": "Campos Elíseos",
+    "localidade": "Resende/RJ",
+    "cep": "27542-000",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Avenida Presidente Kennedy - até 460 - lado par",
+    "bairro": "Centro",
+    "localidade": "Resende/RJ",
+    "cep": "27511-000",
+    "cidade": "Agulhas Negras (Resende)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:40.038Z"
+  },
+  {
+    "logradouro": "Alameda Adolfo Iaggi",
+    "bairro": "Jardim Ouro Preto",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28633-020",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Barão de Cerro Largo",
+    "bairro": "Parque São Clemente",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-230",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Conde D'Eu",
+    "bairro": "Parque São Clemente",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-250",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda da Saudade",
+    "bairro": "Fazenda Bela Vista",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28617-045",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda das Acácias",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-040",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda das Nogueiras",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-065",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda das Pedras Negras",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-090",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda do Canal",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-030",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda do Coqueiro",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-050",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda do Lago",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-042",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda do Planalto",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-109",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda do Pomar",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-075",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Dom Clemente José Carlos Isnard",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28610-322",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda dos Rodrigues",
+    "bairro": "Campo do Coelho",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28630-645",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda dos Sanhandus",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-085",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Eduardo Guinle",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-130",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Kinota",
+    "bairro": "Debossan",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28615-560",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Marquês de Aguiar",
+    "bairro": "Parque São Clemente",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-237",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Marquês de Barbacena",
+    "bairro": "Parque São Clemente",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-260",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Marquês de Maricá",
+    "bairro": "Parque São Clemente",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-190",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Regente Feijó",
+    "bairro": "Parque São Clemente",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-280",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Salomão Salles",
+    "bairro": "Jardim Ouro Preto",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28633-180",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Visconde de Inhaúma",
+    "bairro": "Parque São Clemente",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-200",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Visconde de Ouro Preto",
+    "bairro": "Parque São Clemente",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-220",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Alameda Visconde de Taunay",
+    "bairro": "Parque São Clemente",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28625-210",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Área Rural",
+    "bairro": "Área Rural de Nova Friburgo",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28636-899",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Alberto Braune - lado ímpar",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28613-001",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Alberto Braune - lado par",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28613-000",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Alberto Santos Dumont",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28605-040",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Alcino da Cunha Ferraz",
+    "bairro": "Riograndina",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28634-438",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Ana Barbosa Moreira",
+    "bairro": "Parque Dom João VI",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28616-000",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Antônio Mário de Azevedo",
+    "bairro": "Campo do Coelho",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28630-590",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Antônio Mário de Azevedo",
+    "bairro": "Córrego D'Antas",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28630-310",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Barão de Nova Friburgo",
+    "bairro": "Olaria",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28623-060",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Campesina Friburguense",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28613-120",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Conselheiro Julius Arp",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28623-000",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida dos Ferroviários",
+    "bairro": "Duas Pedras",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28633-010",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Doutor Nicolau Noé",
+    "bairro": "Nova Suíça",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28605-742",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Emil Cleff",
+    "bairro": "Ypu",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28613-230",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Engenheiro Hans Gaiser",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28605-220",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Eugênio Gaiser",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28605-272",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Euterpe Friburguense",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28605-130",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Governador Geremias de Mattos Fontes",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28613-140",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Hamburgo",
+    "bairro": "Mury",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28615-230",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Itália",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28613-090",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida José Pires Barroso",
+    "bairro": "Olaria",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28620-075",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida José Ruiz Bolea",
+    "bairro": "Centro",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28605-000",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Joviniano José Sanglard",
+    "bairro": "Fazenda Bela Vista",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28617-010",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Júlio Antônio Thurler",
+    "bairro": "Olaria",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28620-000",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  },
+  {
+    "logradouro": "Avenida Waldir Teixeira de Abreu",
+    "bairro": "Nova Suíça",
+    "localidade": "Nova Friburgo/RJ",
+    "cep": "28605-740",
+    "cidade": "Amparo (Nova Friburgo)/RJ",
+    "estado": "RJ",
+    "letra": "A",
+    "timestamp": "2025-08-29T17:32:51.600Z"
+  }
+]
