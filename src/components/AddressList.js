@@ -3,7 +3,11 @@ import AddressItem from './AddressItem';
 import LoadingSkeleton from './LoadingSkeleton';
 import { FixedSizeList as VirtualList } from 'react-window';
 
+<<<<<<< HEAD
 function AddressList({ addresses, searchTerm, selectedState, onCopy, loading }) {
+=======
+function AddressList({ addresses, searchTerm, onCopy, loading }) {
+>>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
   const shouldDisplayList = searchTerm.length >= 2;
   const largeList = addresses.length > 2000;
   const itemRefs = useRef([]);

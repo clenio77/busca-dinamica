@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import CityFilter from './components/CityFilter';
+<<<<<<< HEAD
 import StateFilter from './components/StateFilter';
+=======
+>>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
 import AddressList from './components/AddressList';
 import StatsCard from './components/StatsCard';
 import Toast from './components/Toast';
@@ -15,10 +18,14 @@ function App() {
     setSearchTerm,
     selectedCity,
     setSelectedCity,
+<<<<<<< HEAD
     selectedState,
     setSelectedState,
     availableCities,
     availableStates,
+=======
+    availableCities,
+>>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
     addresses,
     loading
   } = useAddressSearch();
@@ -59,6 +66,7 @@ function App() {
           {/* Search Controls Card */}
           <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-6 sm:p-8 mb-8">
             <div className="space-y-6">
+<<<<<<< HEAD
               {/* Filters Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* State Filter */}
@@ -80,6 +88,16 @@ function App() {
                     loading={loading}
                   />
                 </div>
+=======
+              {/* City Filter */}
+              <div className="w-full">
+                <CityFilter
+                  availableCities={availableCities}
+                  selectedCity={selectedCity}
+                  onCityChange={setSelectedCity}
+                  loading={loading}
+                />
+>>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
               </div>
 
               {/* Search Bar */}
@@ -95,7 +113,10 @@ function App() {
               addresses={addresses}
               searchTerm={searchTerm}
               selectedCity={selectedCity}
+<<<<<<< HEAD
               selectedState={selectedState}
+=======
+>>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
             />
           )}
 
@@ -104,7 +125,10 @@ function App() {
             addresses={addresses}
             searchTerm={searchTerm}
             selectedCity={selectedCity}
+<<<<<<< HEAD
             selectedState={selectedState}
+=======
+>>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
             onCopy={showToast}
             loading={loading}
           />
