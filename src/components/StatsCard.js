@@ -1,10 +1,36 @@
 import React from 'react';
 
-function StatsCard({ addresses, searchTerm, selectedCity, selectedState }) {
+function StatsCard({ addresses, searchTerm, selectedCity, selectedState, compact = false }) {
   const totalAddresses = addresses.length;
   const hasSearch = searchTerm.length >= 2;
   if (!hasSearch) {
     return null;
+  }
+
+  if (compact) {
+    // Versão compacta para mobile
+    return (
+      <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-3 mb-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="text-center">
+              <div className="text-xl font-bold text-blue-600">
+                {totalAddresses.toLocaleString()}
+              </div>
+              <div className="text-xs text-gray-600">
+                {totalAddresses === 1 ? 'resultado' : 'resultados'}
+              </div>
+            </div>
+            <div className="text-sm text-gray-700">
+              para <span className="font-semibold">"{searchTerm}"</span>
+              {selectedCity && selectedCity !== 'all' && (
+                <span className="text-gray-500"> em {selectedCity}</span>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

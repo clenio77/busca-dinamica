@@ -2,10 +2,10 @@ import React from 'react';
 import { X, Menu, Search, MapPin, Building, Users } from 'lucide-react';
 import logoImage from '../assets/logoclenio.jpg';
 
-const Sidebar = ({ 
-  isOpen, 
-  onToggle, 
-  searchTerm, 
+const Sidebar = ({
+  isOpen,
+  onToggle,
+  searchTerm,
   onSearchChange,
   selectedCity,
   onCityChange,
@@ -16,7 +16,7 @@ const Sidebar = ({
   cities,
   categories,
   subcategories,
-  onSearch
+  onSearch: _onSearch
 }) => {
   return (
     <>
@@ -38,21 +38,21 @@ const Sidebar = ({
         
         {/* Header with Logo */}
         <div className="p-6 border-b border-blue-500/30">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center space-x-4">
+          <div className="flex items-start justify-between mb-4">
+            <div className="flex flex-col items-center flex-1">
               <img
                 src={logoImage}
                 alt="Logo Clênio Moura"
-                className="h-20 w-20 rounded-xl shadow-lg object-cover border-2 border-white/20"
+                className="h-32 w-32 rounded-xl shadow-lg object-cover border-2 border-white/20 mb-4"
               />
-              <div>
-                <h2 className="text-xl font-bold">Busca Dinâmica</h2>
-                <p className="text-blue-200 text-sm">Sistema inteligente de busca</p>
+              <div className="text-center">
+                <h2 className="text-2xl font-bold">Busca Dinâmica</h2>
+                <p className="text-blue-200 text-base">Sistema inteligente de busca</p>
               </div>
             </div>
             <button
               onClick={onToggle}
-              className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+              className="p-2 hover:bg-white/10 rounded-lg transition-colors ml-2"
             >
               <X size={24} />
             </button>
