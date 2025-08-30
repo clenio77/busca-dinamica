@@ -76,7 +76,8 @@ const Sidebar = ({
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     e.preventDefault();
-                    onSearchChange(''); // Limpa o campo de busca
+                    // Enter executa a busca (remove foco do campo)
+                    e.target.blur();
                   }
                 }}
                 placeholder="Digite pelo menos 2 caracteres..."
@@ -86,11 +87,19 @@ const Sidebar = ({
               />
             </div>
 
-            {/* Dica para limpar com Enter */}
+            {/* Dica e botão para limpar */}
             {searchTerm && (
-              <p className="text-xs text-blue-200 mt-2">
-                💡 Pressione <kbd className="px-1 py-0.5 bg-white/20 border border-white/30 rounded text-xs">Enter</kbd> para limpar a busca
-              </p>
+              <div className="flex items-center justify-between mt-2">
+                <p className="text-xs text-blue-200">
+                  💡 Pressione <kbd className="px-1 py-0.5 bg-white/20 border border-white/30 rounded text-xs">Enter</kbd> para buscar
+                </p>
+                <button
+                  onClick={() => onSearchChange('')}
+                  className="text-xs text-blue-200 hover:text-white font-medium px-2 py-1 rounded hover:bg-white/10 transition-colors"
+                >
+                  ✕ Limpar
+                </button>
+              </div>
             )}
           </div>
 

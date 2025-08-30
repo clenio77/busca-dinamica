@@ -5,11 +5,11 @@ function SearchBar({ searchTerm, onSearchChange }) {
     onSearchChange(event.target.value);
   };
 
-  // Funcionalidade de limpar ao pressionar Enter
+  // Enter executa a busca (remove foco do campo)
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      onSearchChange(''); // Limpa o campo de busca
+      event.target.blur(); // Remove foco, executando a busca
     }
   };
 
@@ -58,10 +58,10 @@ function SearchBar({ searchTerm, onSearchChange }) {
         )}
       </div>
 
-      {/* Dica para limpar com Enter */}
+      {/* Dica para buscar com Enter */}
       {searchTerm && (
         <p className="text-xs text-gray-500 mt-2">
-          💡 Pressione <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs">Enter</kbd> para limpar a busca
+          💡 Pressione <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs">Enter</kbd> para buscar
         </p>
       )}
     </div>

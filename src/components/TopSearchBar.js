@@ -29,7 +29,8 @@ const TopSearchBar = ({
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
                   e.preventDefault();
-                  onSearchChange(''); // Limpa o campo de busca
+                  // No mobile, Enter executa a busca (foca fora do campo)
+                  e.target.blur();
                 }
               }}
               placeholder="Digite pelo menos 2 caracteres..."
@@ -39,11 +40,19 @@ const TopSearchBar = ({
             />
           </div>
           
-          {/* Dica para limpar com Enter */}
+          {/* Botão para limpar busca */}
           {searchTerm && (
-            <p className="text-xs text-gray-500 mt-2">
-              💡 Pressione <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs">Enter</kbd> para limpar a busca
-            </p>
+            <div className="flex items-center justify-between">
+              <p className="text-xs text-gray-500">
+                💡 Pressione <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs">Enter</kbd> para buscar
+              </p>
+              <button
+                onClick={() => onSearchChange('')}
+                className="text-xs text-blue-600 hover:text-blue-800 font-medium px-2 py-1 rounded hover:bg-blue-50 transition-colors"
+              >
+                ✕ Limpar
+              </button>
+            </div>
           )}
         </div>
 
