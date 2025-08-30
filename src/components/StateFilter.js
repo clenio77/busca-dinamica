@@ -12,7 +12,8 @@ const StateFilter = ({ availableStates, selectedState, onStateChange, loading })
           value={selectedState}
           onChange={(e) => onStateChange(e.target.value)}
           disabled={loading}
-          className="w-full px-4 py-3 pr-10 text-gray-900 bg-white border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+          className="w-full px-4 py-3 pr-10 text-gray-900 bg-white border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200 appearance-none"
+          style={{ backgroundImage: 'none' }}
         >
           <option value="">Todos os Estados</option>
           {availableStates.map((state) => (

@@ -26,7 +26,7 @@ async function testCorreiosAccess() {
     console.log('📄 Navegando para a página...');
     
     // Navegar para a página de busca por localidade
-    await page.goto('https://buscacepintra.correios.com.br/app/localidade/index.php', {
+    await page.goto('https://buscacepinter.correios.com.br/app/localidade_logradouro/index.php', {
       waitUntil: 'networkidle'
     });
 

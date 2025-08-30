@@ -3,11 +3,7 @@ import AddressItem from './AddressItem';
 import LoadingSkeleton from './LoadingSkeleton';
 import { FixedSizeList as VirtualList } from 'react-window';
 
-<<<<<<< HEAD
-function AddressList({ addresses, searchTerm, selectedState, onCopy, loading }) {
-=======
-function AddressList({ addresses, searchTerm, onCopy, loading }) {
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
+function AddressList({ addresses, searchTerm, selectedState: _selectedState, onCopy, loading }) {
   const shouldDisplayList = searchTerm.length >= 2;
   const largeList = addresses.length > 2000;
   const itemRefs = useRef([]);
@@ -33,23 +29,7 @@ function AddressList({ addresses, searchTerm, onCopy, loading }) {
 
   // Empty state when no search term
   if (!shouldDisplayList) {
-    return (
-      <div className="text-center py-16">
-        <div className="max-w-md mx-auto">
-          <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center">
-            <svg className="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-700 mb-2">
-            Comece sua busca
-          </h3>
-          <p className="text-gray-500">
-            Digite pelo menos 2 caracteres para buscar endereços
-          </p>
-        </div>
-      </div>
-    );
+    return null;
   }
 
   return (

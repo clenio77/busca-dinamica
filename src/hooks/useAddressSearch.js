@@ -13,17 +13,11 @@ function removeAccents(str) {
 export function useAddressSearch() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
-<<<<<<< HEAD
   const [selectedState, setSelectedState] = useState('');
   const [filteredAddresses, setFilteredAddresses] = useState([]);
   const [loading, setLoading] = useState(true); // Inicia como true para o carregamento inicial
   const [availableCities, setAvailableCities] = useState([]);
   const [availableStates, setAvailableStates] = useState([]);
-=======
-  const [filteredAddresses, setFilteredAddresses] = useState([]);
-  const [loading, setLoading] = useState(true); // Inicia como true para o carregamento inicial
-  const [availableCities, setAvailableCities] = useState([]);
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
 
   // Usamos useRef para armazenar todos os endereços e evitar recarregamentos
   const allAddresses = useRef([]);
@@ -46,13 +40,9 @@ export function useAddressSearch() {
         const cities = [...new Set(data.map(addr => addr.cidade).filter(Boolean))].sort();
         setAvailableCities(cities);
 
-<<<<<<< HEAD
         // Extrair estados únicos e ordenar
         const states = [...new Set(data.map(addr => addr.estado).filter(Boolean))].sort();
         setAvailableStates(states);
-
-=======
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
         setLoading(false);
       })
       .catch(error => {
@@ -61,7 +51,6 @@ export function useAddressSearch() {
       });
   }, []); // O array vazio [] garante que este efeito rode apenas uma vez
 
-<<<<<<< HEAD
   // Efeito para atualizar as cidades disponíveis baseado no estado selecionado
   useEffect(() => {
     if (selectedState) {
@@ -90,9 +79,6 @@ export function useAddressSearch() {
   }, [selectedState, selectedCity]);
 
   // Efeito para FILTRAR os endereços em memória quando o termo de busca, cidade ou estado muda
-=======
-  // Efeito para FILTRAR os endereços em memória quando o termo de busca ou cidade muda
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
   useEffect(() => {
     // Só mostrar resultados se houver termo de busca com pelo menos 2 caracteres
     if (!debouncedTerm || debouncedTerm.length < 2) {
@@ -102,16 +88,12 @@ export function useAddressSearch() {
 
     let filtered = allAddresses.current;
 
-<<<<<<< HEAD
     // Filtrar por estado primeiro, se um estado estiver selecionado
     if (selectedState) {
       filtered = filtered.filter(address => address.estado === selectedState);
     }
 
     // Filtrar por cidade, se uma cidade estiver selecionada
-=======
-    // Filtrar por cidade primeiro, se uma cidade estiver selecionada
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
     if (selectedCity) {
       filtered = filtered.filter(address => address.cidade === selectedCity);
     }
@@ -137,11 +119,7 @@ export function useAddressSearch() {
 
     // Limitar a 100 resultados para não sobrecarregar a tela
     setFilteredAddresses(sorted.slice(0, 100));
-<<<<<<< HEAD
   }, [debouncedTerm, selectedCity, selectedState]);
-=======
-  }, [debouncedTerm, selectedCity]);
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
 
   // Retornamos os endereços filtrados para a UI
   return {
@@ -149,14 +127,10 @@ export function useAddressSearch() {
     setSearchTerm,
     selectedCity,
     setSelectedCity,
-<<<<<<< HEAD
     selectedState,
     setSelectedState,
     availableCities,
     availableStates,
-=======
-    availableCities,
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
     addresses: filteredAddresses,
     loading
   };

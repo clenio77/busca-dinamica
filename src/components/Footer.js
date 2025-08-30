@@ -5,36 +5,25 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 bg-gray-50 border-t border-gray-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="text-center">
-          <div className="flex items-center justify-center space-x-3 mb-4">
+    <footer className="bg-gray-50/95 backdrop-blur-sm border-t border-gray-200">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <div className="flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-4 text-center">
+          {/* Logo */}
+          <div className="flex-shrink-0">
             <img
               src={logoImage}
               alt="Logo Clênio Moura"
-              className="w-10 h-10 rounded-lg object-cover border border-gray-300"
+              className="w-6 h-6 rounded object-cover border border-gray-300"
             />
-            <span className="text-lg font-semibold text-gray-700">
-              Busca Dinâmica 2.0
-            </span>
           </div>
 
-          <p className="text-sm text-gray-600 mb-4">
+          {/* All info in one line */}
+          <div className="text-xs text-gray-500">
+            <span className="font-semibold text-gray-700">Busca Dinâmica 2.0</span>
+            <span className="mx-1">•</span>
             Sistema inteligente de busca de endereços
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-500">
-            <span>&copy; {currentYear} Busca Dinâmica 2.0</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Desenvolvido por Clênio Moura</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Versão 2.0</span>
-          </div>
-
-          <div className="mt-6 pt-6 border-t border-gray-200">
-            <p className="text-xs text-gray-400">
-              Dados de endereços atualizados regularmente para maior precisão
-            </p>
+            <span className="mx-1">•</span>
+            © {currentYear} Desenvolvido por Clênio Moura
           </div>
         </div>
       </div>

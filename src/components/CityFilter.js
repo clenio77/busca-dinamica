@@ -11,7 +11,7 @@ const CityFilter = ({ availableCities, selectedCity, onCityChange, loading }) =>
           <select
             id="city-select"
             disabled
-            className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-xl text-gray-500 cursor-not-allowed focus:outline-none"
+            className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-xl text-gray-500 cursor-not-allowed focus:outline-none appearance-none"
           >
             <option>Carregando cidades...</option>
           </select>

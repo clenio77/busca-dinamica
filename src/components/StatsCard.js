@@ -1,27 +1,15 @@
 import React from 'react';
 
-<<<<<<< HEAD
 function StatsCard({ addresses, searchTerm, selectedCity, selectedState }) {
   const totalAddresses = addresses.length;
   const hasSearch = searchTerm.length >= 2;
-
-=======
-function StatsCard({ addresses, searchTerm, selectedCity }) {
-  const totalAddresses = addresses.length;
-  const hasSearch = searchTerm.length >= 2;
-  
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
   if (!hasSearch) {
     return null;
   }
 
   return (
     <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-6 mb-6">
-<<<<<<< HEAD
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-=======
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
         {/* Total Results */}
         <div className="text-center">
           <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1">
@@ -31,11 +19,7 @@ function StatsCard({ addresses, searchTerm, selectedCity }) {
             {totalAddresses === 1 ? 'Resultado' : 'Resultados'}
           </div>
         </div>
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
         {/* Search Term */}
         <div className="text-center">
           <div className="text-lg font-semibold text-gray-800 mb-1 truncate">
@@ -45,7 +29,6 @@ function StatsCard({ addresses, searchTerm, selectedCity }) {
             Termo de busca
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Selected State */}
         <div className="text-center">
@@ -57,9 +40,6 @@ function StatsCard({ addresses, searchTerm, selectedCity }) {
           </div>
         </div>
 
-=======
-        
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
         {/* Selected City */}
         <div className="text-center">
           <div className="text-lg font-semibold text-gray-800 mb-1">

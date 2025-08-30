@@ -5,13 +5,15 @@ function SearchBar({ searchTerm, onSearchChange }) {
     onSearchChange(event.target.value);
   };
 
-  // Manter a funcionalidade de limpar ao pressionar Enter do JS original
+  // Funcionalidade de limpar ao pressionar Enter
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
       onSearchChange(''); // Limpa o campo de busca
     }
   };
+
+
 
   const clearSearch = () => {
     onSearchChange('');
@@ -39,7 +41,7 @@ function SearchBar({ searchTerm, onSearchChange }) {
           placeholder="Digite o endereço, CEP ou bairro..."
           autoComplete="off"
           aria-label="Buscar endereço por rua, CEP ou bairro"
-          className="w-full pl-12 pr-12 py-3 bg-blue-50/80 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 focus:bg-white transition-all duration-200 placeholder-gray-500"
+          className="w-full pl-12 pr-12 py-3 bg-blue-50/30 border border-blue-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300 focus:bg-white/90 transition-all duration-200 placeholder-gray-400"
         />
 
         {/* Clear Button */}
@@ -56,10 +58,12 @@ function SearchBar({ searchTerm, onSearchChange }) {
         )}
       </div>
 
-      {/* Helper Text */}
-      <p className="text-xs text-gray-500">
-        Pressione Enter para limpar a busca
-      </p>
+      {/* Dica para limpar com Enter */}
+      {searchTerm && (
+        <p className="text-xs text-gray-500 mt-2">
+          💡 Pressione <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs">Enter</kbd> para limpar a busca
+        </p>
+      )}
     </div>
   );
 }

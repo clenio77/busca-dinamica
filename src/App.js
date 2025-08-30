@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-import CityFilter from './components/CityFilter';
-<<<<<<< HEAD
-import StateFilter from './components/StateFilter';
-=======
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
+import Sidebar from './components/Sidebar';
 import AddressList from './components/AddressList';
 import StatsCard from './components/StatsCard';
 import Toast from './components/Toast';
@@ -18,17 +12,16 @@ function App() {
     setSearchTerm,
     selectedCity,
     setSelectedCity,
-<<<<<<< HEAD
     selectedState,
     setSelectedState,
     availableCities,
     availableStates,
-=======
-    availableCities,
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
     addresses,
     loading
   } = useAddressSearch();
+
+  // Sidebar state
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Toast state
   const [toast, setToast] = useState({
@@ -49,8 +42,16 @@ function App() {
     setToast(prev => ({ ...prev, isVisible: false }));
   };
 
+  const handleSearch = () => {
+    if (searchTerm.length >= 2) {
+      showToast('Busca realizada com sucesso!', 'success');
+    } else {
+      showToast('Digite pelo menos 2 caracteres para buscar', 'error');
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex flex-col">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-40">
         <div className="w-full h-full" style={{
@@ -58,65 +59,62 @@ function App() {
         }}></div>
       </div>
 
-      <div className="relative z-10">
-        <Header />
+      {/* Sidebar */}
+      <Sidebar
+        isOpen={sidebarOpen}
+        onToggle={() => setSidebarOpen(!sidebarOpen)}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+        selectedCity={selectedCity}
+        onCityChange={setSelectedCity}
+        selectedCategory={selectedState}
+        onCategoryChange={setSelectedState}
+        selectedSubcategory=""
+        onSubcategoryChange={() => {}}
+        cities={availableCities}
+        categories={availableStates}
+        subcategories={[]}
+        onSearch={handleSearch}
+      />
 
-        {/* Main Content Container */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-          {/* Search Controls Card */}
-          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-6 sm:p-8 mb-8">
-            <div className="space-y-6">
-<<<<<<< HEAD
-              {/* Filters Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* State Filter */}
-                <div className="w-full">
-                  <StateFilter
-                    availableStates={availableStates}
-                    selectedState={selectedState}
-                    onStateChange={setSelectedState}
-                    loading={loading}
-                  />
+      {/* Main Content Container */}
+      <div className={`flex-1 relative z-10 pt-8 pb-12 transition-all duration-300 ${
+        sidebarOpen ? 'lg:ml-96' : 'ml-0'
+      }`}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Welcome Message */}
+          {!searchTerm && addresses.length === 0 && !loading && (
+            <div className="text-center py-16">
+              <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-12">
+                <div className="max-w-md mx-auto">
+                  <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Comece sua busca</h2>
+                  <p className="text-gray-600 mb-6">
+                    Use o menu lateral para filtrar por cidade, estado e digite pelo menos 2 caracteres para buscar endereços.
+                  </p>
+                  <button
+                    onClick={() => setSidebarOpen(true)}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium transition-colors"
+                  >
+                    Abrir Filtros
+                  </button>
                 </div>
-
-                {/* City Filter */}
-                <div className="w-full">
-                  <CityFilter
-                    availableCities={availableCities}
-                    selectedCity={selectedCity}
-                    onCityChange={setSelectedCity}
-                    loading={loading}
-                  />
-                </div>
-=======
-              {/* City Filter */}
-              <div className="w-full">
-                <CityFilter
-                  availableCities={availableCities}
-                  selectedCity={selectedCity}
-                  onCityChange={setSelectedCity}
-                  loading={loading}
-                />
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
-              </div>
-
-              {/* Search Bar */}
-              <div className="w-full">
-                <SearchBar onSearchChange={setSearchTerm} searchTerm={searchTerm} />
               </div>
             </div>
-          </div>
+          )}
 
           {/* Statistics Card */}
-          {!loading && (
+          {!loading && (searchTerm || addresses.length > 0) && (
             <StatsCard
               addresses={addresses}
               searchTerm={searchTerm}
               selectedCity={selectedCity}
-<<<<<<< HEAD
               selectedState={selectedState}
-=======
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
             />
           )}
 
@@ -125,15 +123,17 @@ function App() {
             addresses={addresses}
             searchTerm={searchTerm}
             selectedCity={selectedCity}
-<<<<<<< HEAD
             selectedState={selectedState}
-=======
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
             onCopy={showToast}
             loading={loading}
           />
         </div>
+      </div>
 
+      {/* Footer */}
+      <div className={`relative z-50 shadow-lg transition-all duration-300 ${
+        sidebarOpen ? 'lg:ml-96' : 'ml-0'
+      }`}>
         <Footer />
       </div>
 

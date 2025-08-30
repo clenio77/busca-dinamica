@@ -1,32 +1,11 @@
 {
-<<<<<<< HEAD
-  "name": "busca-dinamica",
-  "version": "1.0.0",
-  "description": "Sistema de busca dinâmica de CEPs e endereços",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "react-window": "^1.8.7",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-=======
   "name": "busca-dinamica-react",
   "version": "0.2.0",
   "private": true,
-  "description": "Busca dinâmica de endereços (rua, CEP, bairro)",
+  "description": "Sistema de busca dinâmica de CEPs e endereços",
   "scripts": {
     "start": "npm run build-css && react-scripts start",
-    "build": "npm run build-css && node scripts/generate-json-from-db.js && react-scripts build",
+    "build": "npm run build-css && react-scripts build",
     "build-css": "tailwindcss -i ./src/input.css -o ./src/output.css",
     "watch-css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "test": "react-scripts test",
@@ -58,6 +37,7 @@
     "express-rate-limit": "^8.0.1",
     "express-validator": "^7.2.1",
     "helmet": "^8.1.0",
+    "lucide-react": "^0.542.0",
     "node-cron": "^4.2.1",
     "playwright": "^1.54.2",
     "react": "^19.1.0",
@@ -70,19 +50,9 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-prettier": "^5.1.0",
-    "postcss": "^8.4.31",
-    "prettier": "^3.3.1",
-    "tailwindcss": "^3.4.0"
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.0"
   },
   "eslintConfig": {
     "extends": [
@@ -102,13 +72,5 @@
       "last 1 safari version"
     ]
   },
-<<<<<<< HEAD
-  "devDependencies": {
-    "tailwindcss": "^3.3.0",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24"
-  }
-=======
   "proxy": "http://localhost:3000"
->>>>>>> 942b7dec60e22afc3363115ba6c75547a46ecfe8
 }
