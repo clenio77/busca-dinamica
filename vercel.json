@@ -1,22 +1,29 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "functions": {
-    "api/cron/update-ceps.js": {
-      "maxDuration": 300
-    },
-    "api/cron/collect-ceps.js": {
-      "maxDuration": 300
-    }
-  },
-  "crons": [
+  "version": 2,
+  "builds": [
     {
-      "path": "/api/cron/update-ceps",
-      "schedule": "0 2 * * 1"
+      "src": "busca-dinamica-react/server.js",
+      "use": "@vercel/node"
     },
     {
-      "path": "/api/cron/collect-ceps",
-      "schedule": "0 6 * * *"
+      "src": "busca-dinamica-react/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
-  ]
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/busca-dinamica-react/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/busca-dinamica-react/build/$1"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
