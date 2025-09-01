@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
-import TopSearchBar from './components/TopSearchBar';
-import MobileHeader from './components/MobileHeader';
 import AddressList from './components/AddressList';
 import StatsCard from './components/StatsCard';
 import Toast from './components/Toast';
+import MobileHeader from './components/MobileHeader';
+import TopSearchBar from './components/TopSearchBar';
 import Footer from './components/Footer';
 import PWAInstallPrompt from './components/PWAInstallPrompt';
-import AnalyticsDebug from './components/AnalyticsDebug';
+import OptimizedImage from './components/OptimizedImage';
+import { AddressListWithSuspense, StatsCardWithSuspense, SidebarWithSuspense, TopSearchBarWithSuspense } from './components/LazyComponents';
 import { useAddressSearch } from './hooks/useAddressSearch';
 import { useScreenSize } from './hooks/useScreenSize';
 import { useTheme } from './hooks/useTheme';
 import { useAnalytics } from './hooks/useAnalytics';
+import { usePerformance } from './hooks/usePerformance';
 import ThemeToggle from './components/ThemeToggle';
-import logoImage from './assets/logoclenio.jpg';
+import logoImage from './assets/logoclenio.jpg'; // Corrected import
 
 function App() {
   const {
@@ -37,6 +39,9 @@ function App() {
   
   // Analytics
   const analytics = useAnalytics();
+  
+  // Performance monitoring
+  const performance = usePerformance();
 
   // Para telas pequenas, usamos interface superior
   const useTopInterface = isMobile || isTablet;
@@ -65,12 +70,19 @@ function App() {
 
   const handleSearch = () => {
     if (searchTerm.length >= 2) {
+      // Iniciar timer de performance
+      const searchStartTime = performance.startSearchTimer();
+      
       // Rastrear evento de busca
       analytics.trackSearch(searchTerm, {
         city: selectedCity,
         state: selectedState,
         resultsCount: addresses.length
       });
+      
+      // Medir tempo de busca
+      const searchTime = performance.endSearchTimer(searchStartTime);
+      console.log(`[Performance] Busca realizada em ${Math.round(searchTime)}ms`);
       
       showToast('Busca realizada com sucesso!', 'success');
     } else {
@@ -176,7 +188,7 @@ function App() {
                   <div className="flex flex-col items-center mb-10">
                     <div className="relative mb-8">
                       <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 p-2 shadow-xl">
-                        <img
+                        <OptimizedImage
                           src={logoImage}
                           alt="Logo Clênio Moura"
                           className="w-full h-full rounded-full object-cover"
@@ -266,7 +278,7 @@ function App() {
 
           {/* Statistics Card */}
           {!loading && (searchTerm || addresses.length > 0) && (
-            <StatsCard
+            <StatsCardWithSuspense
               addresses={addresses}
               searchTerm={searchTerm}
               selectedCity={selectedCity}
@@ -276,7 +288,7 @@ function App() {
           )}
 
           {/* Results */}
-          <AddressList
+          <AddressListWithSuspense
             addresses={addresses}
             searchTerm={searchTerm}
             selectedCity={selectedCity}

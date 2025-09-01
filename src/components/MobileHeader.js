@@ -1,6 +1,7 @@
 import React from 'react';
-import logoImage from '../assets/logoclenio.jpg';
+import OptimizedImage from './OptimizedImage';
 import ThemeToggle from './ThemeToggle';
+import logoImage from '../assets/logoclenio.jpg';
 
 const MobileHeader = ({ isDark, onToggleTheme }) => {
   return (
@@ -8,7 +9,7 @@ const MobileHeader = ({ isDark, onToggleTheme }) => {
       <div className="max-w-4xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <img
+            <OptimizedImage
               src={logoImage}
               alt="Logo Clênio Moura"
               className="w-12 h-12 rounded-lg object-cover shadow-lg border-2 border-white/20"

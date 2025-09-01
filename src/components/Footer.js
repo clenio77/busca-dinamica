@@ -1,4 +1,5 @@
 import React from 'react';
+import OptimizedImage from './OptimizedImage';
 import logoImage from '../assets/logoclenio.jpg';
 
 function Footer() {
@@ -10,7 +11,7 @@ function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-4 text-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img
+            <OptimizedImage
               src={logoImage}
               alt="Logo Clênio Moura"
               className="w-6 h-6 rounded object-cover border border-gray-300 dark:border-gray-600"

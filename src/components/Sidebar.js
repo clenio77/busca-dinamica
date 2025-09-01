@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, Menu, Search, MapPin, Building, Users } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 import logoImage from '../assets/logoclenio.jpg';
 import { useScreenSize } from '../hooks/useScreenSize';
 import ThemeToggle from './ThemeToggle';
@@ -46,7 +47,7 @@ const Sidebar = ({
         <div className="p-6 border-b border-blue-500/30">
           <div className="flex items-start justify-between mb-4">
             <div className="flex flex-col items-center flex-1">
-              <img
+              <OptimizedImage
                 src={logoImage}
                 alt="Logo Clênio Moura"
                 className="h-32 w-32 rounded-xl shadow-lg object-cover border-2 border-white/20 mb-4"
