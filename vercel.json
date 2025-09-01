@@ -1,29 +1,21 @@
 {
   "version": 2,
-  "builds": [
+  "buildCommand": "cd busca-dinamica-react && npm install && npm run build",
+  "outputDirectory": "busca-dinamica-react/build",
+  "installCommand": "cd busca-dinamica-react && npm install",
+  "functions": {
+    "busca-dinamica-react/server.js": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
     {
-      "src": "busca-dinamica-react/server.js",
-      "use": "@vercel/node"
+      "source": "/api/(.*)",
+      "destination": "/busca-dinamica-react/server.js"
     },
     {
-      "src": "busca-dinamica-react/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/busca-dinamica-react/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/busca-dinamica-react/build/$1"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
