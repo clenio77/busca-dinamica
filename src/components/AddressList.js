@@ -3,7 +3,7 @@ import AddressItem from './AddressItem';
 import LoadingSkeleton from './LoadingSkeleton';
 import { FixedSizeList as VirtualList } from 'react-window';
 
-function AddressList({ addresses, searchTerm, selectedState: _selectedState, onCopy, loading }) {
+function AddressList({ addresses, searchTerm, selectedState: _selectedState, onCopy, loading, onAddressClick }) {
   const shouldDisplayList = searchTerm.length >= 2;
   const largeList = addresses.length > 2000;
   const itemRefs = useRef([]);
@@ -11,6 +11,13 @@ function AddressList({ addresses, searchTerm, selectedState: _selectedState, onC
   useEffect(() => {
     itemRefs.current = itemRefs.current.slice(0, addresses.length);
   }, [addresses.length]);
+
+  // Função para rastrear clique em endereço
+  const handleAddressClick = (address, position) => {
+    if (onAddressClick) {
+      onAddressClick(address, position);
+    }
+  };
 
   // Loading state
   if (loading && shouldDisplayList) {
@@ -38,13 +45,13 @@ function AddressList({ addresses, searchTerm, selectedState: _selectedState, onC
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-          <p className="text-lg font-semibold text-gray-700" aria-live="polite" aria-atomic="true">
+          <p className="text-lg font-semibold text-gray-700 dark:text-gray-300" aria-live="polite" aria-atomic="true">
             {addresses.length} {addresses.length === 1 ? 'resultado encontrado' : 'resultados encontrados'}
           </p>
         </div>
 
         {addresses.length > 0 && (
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-gray-500 dark:text-gray-400">
             {largeList && 'Lista virtualizada para melhor performance'}
           </div>
         )}
@@ -52,7 +59,7 @@ function AddressList({ addresses, searchTerm, selectedState: _selectedState, onC
 
       {/* Results List */}
       {addresses.length > 0 ? (
-        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden">
           {largeList ? (
             <VirtualList
               height={600}
@@ -60,7 +67,7 @@ function AddressList({ addresses, searchTerm, selectedState: _selectedState, onC
               itemSize={80}
               width={"100%"}
               style={{ overflowX: 'hidden' }}
-              className="scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+              className="scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-800"
             >
               {({ index, style }) => (
                 <div style={style} className="px-1">
@@ -73,12 +80,13 @@ function AddressList({ addresses, searchTerm, selectedState: _selectedState, onC
                     key={addresses[index].cep + (addresses[index].logradouro || '') + (addresses[index].bairro || '')}
                     isVirtualized={true}
                     onCopy={onCopy}
+                    onClick={() => handleAddressClick(addresses[index], index + 1)}
                   />
                 </div>
               )}
             </VirtualList>
           ) : (
-            <div className="divide-y divide-gray-100">
+            <div className="divide-y divide-gray-100 dark:divide-gray-700">
               {addresses.map((address, idx) => (
                 <AddressItem
                   key={address.cep + (address.logradouro || '') + (address.bairro || '')}
@@ -88,6 +96,7 @@ function AddressList({ addresses, searchTerm, selectedState: _selectedState, onC
                   ref={el => itemRefs.current[idx] = el}
                   id={`address-item-${idx}`}
                   onCopy={onCopy}
+                  onClick={() => handleAddressClick(address, idx + 1)}
                 />
               ))}
             </div>
@@ -97,7 +106,7 @@ function AddressList({ addresses, searchTerm, selectedState: _selectedState, onC
         // No results state
         <div className="text-center py-16">
           <div className="max-w-md mx-auto">
-            <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center">
+            <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-full flex items-center justify-center">
               <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.467-.881-6.08-2.33" />
               </svg>

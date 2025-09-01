@@ -7,9 +7,11 @@ import StatsCard from './components/StatsCard';
 import Toast from './components/Toast';
 import Footer from './components/Footer';
 import PWAInstallPrompt from './components/PWAInstallPrompt';
+import AnalyticsDebug from './components/AnalyticsDebug';
 import { useAddressSearch } from './hooks/useAddressSearch';
 import { useScreenSize } from './hooks/useScreenSize';
 import { useTheme } from './hooks/useTheme';
+import { useAnalytics } from './hooks/useAnalytics';
 import ThemeToggle from './components/ThemeToggle';
 import logoImage from './assets/logoclenio.jpg';
 
@@ -32,6 +34,9 @@ function App() {
   
   // Theme management
   const { isDark, toggleTheme } = useTheme();
+  
+  // Analytics
+  const analytics = useAnalytics();
 
   // Para telas pequenas, usamos interface superior
   const useTopInterface = isMobile || isTablet;
@@ -60,10 +65,35 @@ function App() {
 
   const handleSearch = () => {
     if (searchTerm.length >= 2) {
+      // Rastrear evento de busca
+      analytics.trackSearch(searchTerm, {
+        city: selectedCity,
+        state: selectedState,
+        resultsCount: addresses.length
+      });
+      
       showToast('Busca realizada com sucesso!', 'success');
     } else {
       showToast('Digite pelo menos 2 caracteres para buscar', 'error');
     }
+  };
+
+  // Rastrear mudanças de tema
+  const handleThemeToggle = () => {
+    const newTheme = isDark ? 'light' : 'dark';
+    analytics.trackThemeChange(newTheme);
+    toggleTheme();
+  };
+
+  // Rastrear mudanças de filtro
+  const handleCityChange = (city) => {
+    analytics.trackFilterChange('city', city);
+    setSelectedCity(city);
+  };
+
+  const handleStateChange = (state) => {
+    analytics.trackFilterChange('state', state);
+    setSelectedState(state);
   };
 
   return (
@@ -79,7 +109,7 @@ function App() {
       {useTopInterface ? (
         // Interface para telas pequenas - Header + Menu superior
         <>
-          <MobileHeader isDark={isDark} onToggleTheme={toggleTheme} />
+          <MobileHeader isDark={isDark} onToggleTheme={handleThemeToggle} />
           <div className="relative z-10 pt-4 pb-12">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Top Search Bar */}
@@ -87,9 +117,9 @@ function App() {
                 searchTerm={searchTerm}
                 onSearchChange={setSearchTerm}
                 selectedCity={selectedCity}
-                onCityChange={setSelectedCity}
+                onCityChange={handleCityChange}
                 selectedState={selectedState}
-                onStateChange={setSelectedState}
+                onStateChange={handleStateChange}
                 cities={availableCities}
                 states={availableStates}
               />
@@ -114,7 +144,7 @@ function App() {
           subcategories={[]}
           onSearch={handleSearch}
           isDark={isDark}
-          onToggleTheme={toggleTheme}
+          onToggleTheme={handleThemeToggle}
         />
       )}
 
@@ -253,6 +283,7 @@ function App() {
             selectedState={selectedState}
             onCopy={showToast}
             loading={loading}
+            onAddressClick={analytics.trackAddressClick}
           />
         </div>
       </div>
@@ -274,6 +305,8 @@ function App() {
 
       {/* PWA Install Prompt */}
       <PWAInstallPrompt />
+
+
     </div>
   );
 }
