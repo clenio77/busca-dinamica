@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Menu, Search, MapPin, Building, Users } from 'lucide-react';
 import logoImage from '../assets/logoclenio.jpg';
+import { useScreenSize } from '../hooks/useScreenSize';
 
 const Sidebar = ({
   isOpen,
@@ -18,6 +19,8 @@ const Sidebar = ({
   subcategories,
   onSearch: _onSearch
 }) => {
+  const { isMobile, isTablet } = useScreenSize();
+
   return (
     <>
       {/* Overlay for mobile */}
@@ -76,8 +79,14 @@ const Sidebar = ({
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     e.preventDefault();
-                    // Enter executa a busca (remove foco do campo)
-                    e.target.blur();
+                    
+                    // Em telas grandes (desktop): limpa o campo de busca
+                    // Em telas pequenas (mobile/tablet): apenas remove o foco
+                    if (isMobile || isTablet) {
+                      e.target.blur(); // Remove foco, executando a busca
+                    } else {
+                      onSearchChange(''); // Limpa o campo de busca
+                    }
                   }
                 }}
                 placeholder="Digite pelo menos 2 caracteres..."
@@ -91,7 +100,8 @@ const Sidebar = ({
             {searchTerm && (
               <div className="flex items-center justify-between mt-2">
                 <p className="text-xs text-blue-200">
-                  💡 Pressione <kbd className="px-1 py-0.5 bg-white/20 border border-white/30 rounded text-xs">Enter</kbd> para buscar
+                  💡 Pressione <kbd className="px-1 py-0.5 bg-white/20 border border-white/30 rounded text-xs">Enter</kbd> 
+                  {isMobile || isTablet ? ' para buscar' : ' para limpar'}
                 </p>
                 <button
                   onClick={() => onSearchChange('')}

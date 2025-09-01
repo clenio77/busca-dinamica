@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, MapPin, Building } from 'lucide-react';
+import { useScreenSize } from '../hooks/useScreenSize';
 
 const TopSearchBar = ({ 
   searchTerm, 
@@ -11,6 +12,8 @@ const TopSearchBar = ({
   cities,
   states
 }) => {
+  const { isMobile, isTablet } = useScreenSize();
+
   return (
     <div className="bg-white/90 backdrop-blur-xl shadow-lg border border-white/20 rounded-2xl p-6 mb-6">
       <div className="space-y-4">
@@ -29,8 +32,14 @@ const TopSearchBar = ({
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
                   e.preventDefault();
-                  // No mobile, Enter executa a busca (foca fora do campo)
-                  e.target.blur();
+                  
+                  // Em telas grandes (desktop): limpa o campo de busca
+                  // Em telas pequenas (mobile/tablet): apenas remove o foco
+                  if (isMobile || isTablet) {
+                    e.target.blur(); // Remove foco, executando a busca
+                  } else {
+                    onSearchChange(''); // Limpa o campo de busca
+                  }
                 }
               }}
               placeholder="Digite pelo menos 2 caracteres..."
@@ -44,7 +53,8 @@ const TopSearchBar = ({
           {searchTerm && (
             <div className="flex items-center justify-between">
               <p className="text-xs text-gray-500">
-                💡 Pressione <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs">Enter</kbd> para buscar
+                💡 Pressione <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs">Enter</kbd> 
+                {isMobile || isTablet ? ' para buscar' : ' para limpar'}
               </p>
               <button
                 onClick={() => onSearchChange('')}
