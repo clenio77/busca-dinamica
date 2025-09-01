@@ -8,6 +8,7 @@ import Toast from './components/Toast';
 import Footer from './components/Footer';
 import { useAddressSearch } from './hooks/useAddressSearch';
 import { useScreenSize } from './hooks/useScreenSize';
+import logoImage from './assets/logoclenio.jpg';
 
 function App() {
   const {
@@ -122,28 +123,100 @@ function App() {
           {/* Welcome Message */}
           {!searchTerm && addresses.length === 0 && !loading && (
             <div className={`text-center ${useTopInterface ? 'py-8' : 'py-16'}`}>
-              <div className={`bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 ${useTopInterface ? 'p-6' : 'p-12'}`}>
-                <div className="max-w-md mx-auto">
-                  <div className={`${useTopInterface ? 'w-16 h-16 mb-4' : 'w-20 h-20 mb-6'} bg-blue-100 rounded-full flex items-center justify-center mx-auto`}>
-                    <svg className={`${useTopInterface ? 'w-8 h-8' : 'w-10 h-10'} text-blue-600`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
+              <div className={`relative overflow-hidden bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/40 ${useTopInterface ? 'p-8' : 'p-16'}`}>
+                
+                {/* Background subtle pattern */}
+                <div className="absolute inset-0 opacity-5">
+                  <div className="w-full h-full" style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+                  }}></div>
+                </div>
+
+                <div className="relative z-10 max-w-2xl mx-auto">
+                  
+                  {/* Logo e Título Principal */}
+                  <div className="flex flex-col items-center mb-12">
+                    <div className="relative mb-8">
+                      <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 p-2 shadow-xl">
+                        <img
+                          src={logoImage}
+                          alt="Logo Clênio Moura"
+                          className="w-full h-full rounded-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-green-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
+                      Busca Dinâmica 2.0
+                    </h1>
+                    <p className="text-xl text-gray-600 mb-8 max-w-md">
+                      Sistema inteligente de busca de endereços com mais de 5.000 registros
+                    </p>
                   </div>
-                  <h2 className={`${useTopInterface ? 'text-xl' : 'text-2xl'} font-bold text-gray-900 mb-4`}>Comece sua busca</h2>
-                  <p className={`text-gray-600 ${useTopInterface ? 'mb-4 text-sm' : 'mb-6'}`}>
-                    {useTopInterface
-                      ? "Use os filtros acima para buscar endereços por cidade, estado e digite pelo menos 2 caracteres."
-                      : "Use o menu lateral para filtrar por cidade, estado e digite pelo menos 2 caracteres para buscar endereços."
-                    }
-                  </p>
-                  {!useTopInterface && (
-                    <button
-                      onClick={() => setSidebarOpen(true)}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium transition-colors"
-                    >
-                      Abrir Filtros
-                    </button>
-                  )}
+
+                  {/* Features em linha única */}
+                  <div className="flex justify-center items-center space-x-8 mb-12">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      <span className="text-gray-600">Busca Inteligente</span>
+                    </div>
+                    <div className="w-px h-6 bg-gray-300"></div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      <span className="text-gray-600">Filtros Avançados</span>
+                    </div>
+                    <div className="w-px h-6 bg-gray-300"></div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      <span className="text-gray-600">Resultados Rápidos</span>
+                    </div>
+                  </div>
+
+                  {/* Call to Action */}
+                  <div className="text-center mb-8">
+                    <p className="text-gray-600 mb-8 max-w-lg mx-auto text-lg">
+                      {useTopInterface
+                        ? "Use os filtros acima para buscar endereços por cidade, estado e digite pelo menos 2 caracteres."
+                        : "Use o menu lateral para filtrar por cidade, estado e digite pelo menos 2 caracteres para buscar endereços."
+                      }
+                    </p>
+                    {!useTopInterface && (
+                      <button
+                        onClick={() => setSidebarOpen(true)}
+                        className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
+                      >
+                        <span className="flex items-center justify-center">
+                          <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                          </svg>
+                          Abrir Filtros
+                        </span>
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Stats Preview */}
+                  <div className="pt-8 border-t border-gray-200">
+                    <div className="grid grid-cols-3 gap-8 text-center">
+                      <div>
+                        <div className="text-3xl font-bold text-blue-600 mb-1">5.358</div>
+                        <div className="text-gray-600">Endereços</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-green-600 mb-1">100%</div>
+                        <div className="text-gray-600">Gratuito</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-purple-600 mb-1">24/7</div>
+                        <div className="text-gray-600">Disponível</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
