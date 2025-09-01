@@ -5,7 +5,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-50/95 backdrop-blur-sm border-t border-gray-200">
+    <footer className="bg-gray-50/95 backdrop-blur-sm border-t border-gray-200 lg:fixed lg:bottom-0 lg:left-0 lg:right-0 lg:z-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-4 text-center">
           {/* Logo */}

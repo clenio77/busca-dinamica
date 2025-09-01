@@ -111,8 +111,8 @@ function App() {
         />
       )}
 
-      {/* Main Content Container */}
-      <div className={`flex-1 relative z-10 pb-12 transition-all duration-300 ${
+      {/* Main Content Container - Flex para footer fixo */}
+      <div className={`flex-1 relative z-10 transition-all duration-300 lg:pb-16 ${
         useTopInterface
           ? 'pt-0' // Para interface superior, sem padding top extra
           : sidebarOpen
@@ -250,7 +250,7 @@ function App() {
         </div>
       </div>
 
-      {/* Footer */}
+      {/* Footer Fixo - Só nas telas grandes */}
       <div className={`relative z-50 shadow-lg transition-all duration-300 ${
         sidebarOpen ? 'lg:ml-96' : 'ml-0'
       }`}>
