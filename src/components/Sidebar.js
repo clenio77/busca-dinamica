@@ -2,6 +2,7 @@ import React from 'react';
 import { X, Menu, Search, MapPin, Building, Users } from 'lucide-react';
 import logoImage from '../assets/logoclenio.jpg';
 import { useScreenSize } from '../hooks/useScreenSize';
+import ThemeToggle from './ThemeToggle';
 
 const Sidebar = ({
   isOpen,
@@ -17,7 +18,9 @@ const Sidebar = ({
   cities,
   categories,
   subcategories,
-  onSearch: _onSearch
+  onSearch: _onSearch,
+  isDark,
+  onToggleTheme
 }) => {
   const { isMobile, isTablet } = useScreenSize();
 
@@ -53,12 +56,18 @@ const Sidebar = ({
                 <p className="text-blue-200 text-base">Sistema inteligente de busca</p>
               </div>
             </div>
-            <button
-              onClick={onToggle}
-              className="p-2 hover:bg-white/10 rounded-lg transition-colors ml-2"
-            >
-              <X size={24} />
-            </button>
+            <div className="flex flex-col items-center space-y-2 ml-2">
+              {/* Theme Toggle Button */}
+              <ThemeToggle isDark={isDark} onToggle={onToggleTheme} />
+              
+              {/* Close Button */}
+              <button
+                onClick={onToggle}
+                className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+              >
+                <X size={24} />
+              </button>
+            </div>
           </div>
         </div>
 

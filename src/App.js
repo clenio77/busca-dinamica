@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import TopSearchBar from './components/TopSearchBar';
 import MobileHeader from './components/MobileHeader';
@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import PWAInstallPrompt from './components/PWAInstallPrompt';
 import { useAddressSearch } from './hooks/useAddressSearch';
 import { useScreenSize } from './hooks/useScreenSize';
+import { useTheme } from './hooks/useTheme';
+import ThemeToggle from './components/ThemeToggle';
 import logoImage from './assets/logoclenio.jpg';
 
 function App() {
@@ -27,6 +29,9 @@ function App() {
 
   // Screen size detection
   const { isMobile, isTablet } = useScreenSize();
+  
+  // Theme management
+  const { isDark, toggleTheme } = useTheme();
 
   // Para telas pequenas, usamos interface superior
   const useTopInterface = isMobile || isTablet;
@@ -62,7 +67,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex flex-col">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-40">
         <div className="w-full h-full" style={{
@@ -74,7 +79,7 @@ function App() {
       {useTopInterface ? (
         // Interface para telas pequenas - Header + Menu superior
         <>
-          <MobileHeader />
+          <MobileHeader isDark={isDark} onToggleTheme={toggleTheme} />
           <div className="relative z-10 pt-4 pb-12">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Top Search Bar */}
@@ -108,6 +113,8 @@ function App() {
           categories={availableStates}
           subcategories={[]}
           onSearch={handleSearch}
+          isDark={isDark}
+          onToggleTheme={toggleTheme}
         />
       )}
 
@@ -124,7 +131,7 @@ function App() {
           {/* Welcome Message */}
           {!searchTerm && addresses.length === 0 && !loading && (
             <div className={`text-center ${useTopInterface ? 'py-6' : 'py-12'}`}>
-              <div className={`relative overflow-hidden bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/40 ${useTopInterface ? 'p-6' : 'p-12'}`}>
+              <div className={`relative overflow-hidden bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/40 dark:border-gray-600/40 ${useTopInterface ? 'p-6' : 'p-12'}`}>
                 
                 {/* Background subtle pattern */}
                 <div className="absolute inset-0 opacity-5">
@@ -159,7 +166,7 @@ function App() {
                     <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
                       Busca Dinâmica 2.0
                     </h1>
-                    <p className="text-xl text-gray-700 mb-8 max-w-xl leading-relaxed font-medium">
+                    <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-xl leading-relaxed font-medium">
                       Sistema inteligente de busca de endereços com mais de 5.000 registros
                     </p>
                   </div>
@@ -168,23 +175,23 @@ function App() {
                   <div className="flex justify-center items-center space-x-10 mb-10">
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                      <span className="text-gray-700 font-medium">Busca Inteligente</span>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Busca Inteligente</span>
                     </div>
                     <div className="w-px h-6 bg-gray-300"></div>
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                      <span className="text-gray-700 font-medium">Filtros Avançados</span>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Filtros Avançados</span>
                     </div>
                     <div className="w-px h-6 bg-gray-300"></div>
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-700 font-medium">Resultados Rápidos</span>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Resultados Rápidos</span>
                     </div>
                   </div>
 
                   {/* Call to Action */}
                   <div className="text-center mb-8">
-                    <p className="text-gray-600 mb-6 max-w-xl mx-auto text-lg leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-xl mx-auto text-lg leading-relaxed">
                       {useTopInterface
                         ? "Use os filtros acima para buscar endereços por cidade, estado e digite pelo menos 2 caracteres."
                         : "Use o menu lateral para filtrar por cidade, estado e digite pelo menos 2 caracteres para buscar endereços."
@@ -210,15 +217,15 @@ function App() {
                     <div className="grid grid-cols-3 gap-8 text-center">
                       <div>
                         <div className="text-3xl font-bold text-blue-600 mb-1">5.358</div>
-                        <div className="text-gray-600">Endereços</div>
+                        <div className="text-gray-600 dark:text-gray-400">Endereços</div>
                       </div>
                       <div>
                         <div className="text-3xl font-bold text-green-600 mb-1">100%</div>
-                        <div className="text-gray-600">Gratuito</div>
+                        <div className="text-gray-600 dark:text-gray-400">Gratuito</div>
                       </div>
                       <div>
                         <div className="text-3xl font-bold text-purple-600 mb-1">24/7</div>
-                        <div className="text-gray-600">Disponível</div>
+                        <div className="text-gray-600 dark:text-gray-400">Disponível</div>
                       </div>
                     </div>
                   </div>
