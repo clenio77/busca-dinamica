@@ -3,15 +3,10 @@
   "buildCommand": "cd busca-dinamica-react && npm install && npm run build",
   "outputDirectory": "busca-dinamica-react/build",
   "installCommand": "cd busca-dinamica-react && npm install",
-  "functions": {
-    "busca-dinamica-react/server.js": {
-      "maxDuration": 30
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/busca-dinamica-react/server.js"
+      "destination": "/api/cep/$1"
     },
     {
       "source": "/(.*)",
