@@ -143,7 +143,10 @@ function App() {
                           src={logoImage}
                           alt="Logo Clênio Moura"
                           className="w-full h-full rounded-full object-cover"
-                          style={{ filter: 'contrast(1.1) brightness(1.05)' }}
+                          style={{ 
+                            filter: 'contrast(1.3) brightness(1.2) saturate(1.1)',
+                            transform: 'scale(1.05)'
+                          }}
                         />
                       </div>
                       <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-3 border-white shadow-lg flex items-center justify-center">
