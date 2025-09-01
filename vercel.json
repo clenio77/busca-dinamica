@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "cd busca-dinamica-react && npm install && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "busca-dinamica-react/build",
-  "installCommand": "cd busca-dinamica-react && npm install",
+  "installCommand": "npm install",
   "rewrites": [
     {
       "source": "/api/(.*)",
