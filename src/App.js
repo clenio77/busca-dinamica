@@ -6,6 +6,7 @@ import AddressList from './components/AddressList';
 import StatsCard from './components/StatsCard';
 import Toast from './components/Toast';
 import Footer from './components/Footer';
+import PWAInstallPrompt from './components/PWAInstallPrompt';
 import { useAddressSearch } from './hooks/useAddressSearch';
 import { useScreenSize } from './hooks/useScreenSize';
 import logoImage from './assets/logoclenio.jpg';
@@ -259,6 +260,9 @@ function App() {
         onClose={hideToast}
         type={toast.type}
       />
+
+      {/* PWA Install Prompt */}
+      <PWAInstallPrompt />
     </div>
   );
 }
