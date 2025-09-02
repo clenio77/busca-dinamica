@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Sistema de busca dinâmica de CEPs e endereços",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "build": "cd busca-dinamica-react && npm install && npx react-scripts build",
     "start": "cd busca-dinamica-react && npm start",
