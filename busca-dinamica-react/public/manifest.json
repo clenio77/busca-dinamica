@@ -1,0 +1,70 @@
+{
+  "short_name": "Busca Dinâmica",
+  "name": "Busca Dinâmica 2.0 - Sistema inteligente de busca de endereços",
+  "description": "Sistema inteligente de busca de endereços por rua, CEP e bairro com mais de 5.000 registros",
+  "icons": [
+    {
+      "src": "image/logo.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "image/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "image/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "categories": ["utilities", "productivity"],
+  "screenshots": [
+    {
+      "src": "image/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "image/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Buscar Endereços",
+      "short_name": "Buscar",
+      "description": "Buscar endereços por rua, CEP ou bairro",
+      "url": "/?action=search",
+      "icons": [
+        {
+          "src": "image/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Filtros",
+      "short_name": "Filtros",
+      "description": "Abrir filtros de busca",
+      "url": "/?action=filters",
+      "icons": [
+        {
+          "src": "image/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
