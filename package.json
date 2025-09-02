@@ -4,8 +4,7 @@
   "private": true,
   "description": "Sistema de busca dinâmica de CEPs e endereços",
   "scripts": {
-    "install": "cd busca-dinamica-react && npm install",
-    "build": "cd busca-dinamica-react && npm run build",
+    "build": "cd busca-dinamica-react && npm install && npm run build",
     "start": "cd busca-dinamica-react && npm start",
     "dev": "cd busca-dinamica-react && npm run dev"
   },
