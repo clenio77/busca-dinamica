@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Busca</title>
+</head>
+<body>
+    <h1>Teste de Busca de CEPs</h1>
+    <input type="text" id="searchInput" placeholder="Digite para buscar..." />
+    <div id="results"></div>
+
+    <script>
+        let allAddresses = [];
+        
+        // Carregar dados
+        fetch('/ceps.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Dados carregados:', data.length, 'registros');
+                console.log('Primeiro registro:', data[0]);
+                
+                // Mapear campos
+                allAddresses = data.map(address => ({
+                    ...address,
+                    street: address.logradouro,
+                    neighborhood: address.bairro,
+                    city: address.cidade,
+                    state: address.estado,
+                    complement: address.complemento
+                }));
+                
+                console.log('Primeiro registro mapeado:', allAddresses[0]);
+                
+                // Encontrar registros com logradouro preenchido
+                const withStreet = allAddresses.filter(addr => addr.street && addr.street.trim() !== '');
+                console.log('Registros com logradouro:', withStreet.length);
+                console.log('Exemplo com logradouro:', withStreet[0]);
+            })
+            .catch(error => {
+                console.error('Erro ao carregar dados:', error);
+            });
+        
+        // Função de busca
+        function search(term) {
+            if (!term || term.length < 2) return [];
+            
+            const results = allAddresses.filter(addr => 
+                (addr.street && addr.street.toLowerCase().includes(term.toLowerCase())) ||
+                (addr.neighborhood && addr.neighborhood.toLowerCase().includes(term.toLowerCase())) ||
+                (addr.city && addr.city.toLowerCase().includes(term.toLowerCase())) ||
+                (addr.cep && addr.cep.includes(term))
+            ).slice(0, 10);
+            
+            return results;
+        }
+        
+        // Event listener
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const term = e.target.value;
+            const results = search(term);
+            
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+            
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const div = document.createElement('div');
+                    div.style.padding = '10px';
+                    div.style.border = '1px solid #ccc';
+                    div.style.margin = '5px 0';
+                    div.innerHTML = `
+                        <strong>${result.street || 'Sem logradouro'}</strong> - 
+                        CEP: ${result.cep} - 
+                        ${result.neighborhood || 'Sem bairro'} - 
+                        ${result.city || 'Sem cidade'}
+                    `;
+                    resultsDiv.appendChild(div);
+                });
+            } else if (term.length >= 2) {
+                resultsDiv.innerHTML = '<p>Nenhum resultado encontrado</p>';
+            }
+        });
+    </script>
+</body>
+</html>

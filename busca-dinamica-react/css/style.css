@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Fundo cinza claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px; /* Ajustado para uma largura de conteúdo mais comum */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 80px; /* Tamanho do logo ajustado */
+    height: auto;
+    margin-right: 15px;
+}
+
+.main-title {
+    font-size: 48px; /* Ligeiramente menor para melhor equilíbrio */
+    color: #054e7d; /* Azul escuro do rodapé original */
+    font-weight: bold;
+    margin: 0;
+}
+
+.dev {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.search-box {
+    position: relative;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#input {
+    flex: 1;
+    font-size: 18px;
+    padding: 12px 20px 12px 50px; /* Aumento do padding esquerdo para o ícone */
+    border: 2px solid #ccc; /* Borda mais grossa */
+    border-radius: 25px; /* Cantos arredondados */
+    transition: all 0.3s ease;
+    outline: none; /* Remover outline padrão */
+}
+
+#voice-btn {
+    padding: 12px 20px;
+    background: #054e7d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+#voice-btn:hover {
+    background: #043a5f;
+}
+
+#voice-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.search-options {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#input:focus {
+    border-color: #3baee0; /* Destaque ao focar */
+    box-shadow: 0 0 8px rgba(59, 174, 224, 0.4);
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px;
+}
+
+#ul {
+    margin-top: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden; /* Garante que os cantos arredondados se apliquem aos filhos */
+}
+
+#ul li {
+    display: none; /* Mantém oculto por padrão */
+}
+
+#ul li a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px; /* Tamanho da fonte ajustado para legibilidade */
+    color: #333;
+    display: flex; /* Usa flexbox para alinhamento */
+    justify-content: space-between; /* Espaça o endereço e o CEP/bairro */
+    align-items: center;
+    background-color: #eaf6fd; /* Fundo azul claro para os itens */
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#ul li a:hover {
+    background-color: #d1efff; /* Azul mais claro ao passar o mouse */
+    color: #054e7d; /* Texto mais escuro ao passar o mouse */
+}
+
+#ul li:last-child a {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+#ul li a strong {
+    font-size: 18px; /* Mantém o tamanho do CEP consistente com o endereço */
+    color: #054e7d; /* Azul escuro para o CEP */
+    background-color: transparent; /* Remove o fundo preto */
+    padding: 0 5px;
+    border-radius: 3px;
+    white-space: nowrap; /* Evita que o CEP quebre a linha */
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #054e7d; /* Azul escuro */
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .main-title {
+        font-size: 36px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    #input {
+        font-size: 16px;
+        padding: 10px 15px 10px 45px;
+    }
+
+    .search-icon {
+        left: 15px;
+        font-size: 18px;
+    }
+
+    #ul li a {
+        font-size: 16px;
+        padding: 12px 15px;
+        flex-direction: column; /* Empilha o endereço e o CEP em telas menores */
+        align-items: flex-start;
+    }
+
+    #ul li a strong {
+        margin-top: 5px;
+    }
+}

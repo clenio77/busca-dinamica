@@ -1,0 +1,129 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      name: "Warm up phase"
+    - duration: 120
+      arrivalRate: 10
+      name: "Sustained load"
+    - duration: 60
+      arrivalRate: 20
+      name: "Peak load"
+    - duration: 60
+      arrivalRate: 5
+      name: "Cool down"
+  defaults:
+    headers:
+      User-Agent: "Artillery Performance Test"
+  plugins:
+    metrics-by-endpoint: {}
+    expect: {}
+
+scenarios:
+  - name: "Homepage Load"
+    weight: 30
+    flow:
+      - get:
+          url: "/"
+          expect:
+            - statusCode: 200
+            - contentType: html
+      - think: 2
+
+  - name: "Search Functionality"
+    weight: 50
+    flow:
+      - get:
+          url: "/"
+          expect:
+            - statusCode: 200
+      - think: 1
+      - get:
+          url: "/api/cep/search"
+          qs:
+            q: "rua"
+          expect:
+            - statusCode: 200
+            - contentType: json
+            - hasProperty: "success"
+            - hasProperty: "data"
+      - think: 2
+      - get:
+          url: "/api/cep/search"
+          qs:
+            q: "avenida"
+            cidade: "São Paulo"
+          expect:
+            - statusCode: 200
+      - think: 1
+      - get:
+          url: "/api/cep/search"
+          qs:
+            q: "rua"
+            estado: "SP"
+          expect:
+            - statusCode: 200
+
+  - name: "CEP Lookup"
+    weight: 20
+    flow:
+      - get:
+          url: "/api/cep/12345678"
+          expect:
+            - statusCode: 200
+            - contentType: json
+      - think: 1
+      - get:
+          url: "/api/cep/cities"
+          expect:
+            - statusCode: 200
+      - think: 1
+      - get:
+          url: "/api/cep/states"
+          expect:
+            - statusCode: 200
+
+  - name: "Error Handling"
+    weight: 5
+    flow:
+      - get:
+          url: "/api/cep/search"
+          qs:
+            q: "a"
+          expect:
+            - statusCode: 400
+      - think: 1
+      - get:
+          url: "/api/cep/123"
+          expect:
+            - statusCode: 400
+      - think: 1
+      - get:
+          url: "/api/cep/99999999"
+          expect:
+            - statusCode: 404
+
+  - name: "Rate Limiting Test"
+    weight: 5
+    flow:
+      - get:
+          url: "/api/cep/search"
+          qs:
+            q: "test"
+          expect:
+            - statusCode: [200, 429]
+      - think: 0.1
+      - get:
+          url: "/api/cep/search"
+          qs:
+            q: "test2"
+          expect:
+            - statusCode: [200, 429]
+      - think: 0.1
+      - get:
+          url: "/api/cep/search"
+          qs:
+            q: "test3"
+          expect:
+            - statusCode: [200, 429]
