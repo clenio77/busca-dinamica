@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd busca-dinamica-react && npm install && npm run build",
+  "buildCommand": "cd busca-dinamica-react && pwd && echo 'Listing repo root:' && ls -la .. && echo 'Listing subdir:' && ls -la . && echo 'Listing public:' && ls -la public && node -v && npm -v && npm install && npm run build",
   "outputDirectory": "busca-dinamica-react/build",
   "installCommand": "cd busca-dinamica-react && npm install",
   "rewrites": [
