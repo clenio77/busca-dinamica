@@ -73,6 +73,10 @@ jspm_packages/
 .cache/
 public
 
+# Ensure our app public folder is tracked
+!busca-dinamica-react/public/
+!busca-dinamica-react/public/**
+
 # Storybook build outputs
 .out
 .storybook-out
